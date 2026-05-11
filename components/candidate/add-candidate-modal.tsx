@@ -160,7 +160,7 @@ export default function AddCandidateModal({
               <Switch
                 checked={isActive}
                 onCheckedChange={(v) => setIsActive(v)}
-                className="data-[state=checked]:bg-[#0B5B4D]"
+                className="data-[state=checked]:bg-[#071526]"
               />
               <span className="text-sm">
                 {isActive ? "Active" : "Inactive"}
@@ -177,7 +177,7 @@ export default function AddCandidateModal({
               <Switch
                 checked={qualified}
                 onCheckedChange={(v) => setQualified(v)}
-                className="data-[state=checked]:bg-[#0B5B4D]"
+                className="data-[state=checked]:bg-[#071526]"
               />
               <span className="text-sm">{qualified ? "Yes" : "No"}</span>
             </div>
@@ -195,7 +195,7 @@ export default function AddCandidateModal({
 
           <button
             onClick={handleSave}
-            className="px-6 py-2 bg-[#0B5B4D] text-white rounded-md flex items-center gap-2"
+            className="px-6 py-2 bg-[#071526] text-white rounded-md flex items-center gap-2"
             disabled={isLoading}
           >
             {isLoading && <Loader2 className="w-4 h-4 animate-spin" />}

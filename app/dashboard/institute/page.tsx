@@ -223,7 +223,7 @@ const Page = () => {
     <div className="w-full h-full flex flex-col p-6 font-sans relative">
       {/* HEADER */}
       <section className="flex items-center justify-between mb-6">
-        <h1 className="text-xl font-bold text-[#1E1E1E]">All Institutes</h1>
+        <h1 className="text-xl font-bold text-[#0a0a14]">All Institutes</h1>
 
         <div className="flex items-center gap-4">
           <button
@@ -236,7 +236,7 @@ const Page = () => {
 
           <button
             onClick={() => setShowCreateModal(true)}
-            className="bg-[#0B5B4D] text-white px-6 py-2 rounded-md"
+            className="bg-[#071526] text-white px-6 py-2 rounded-md"
           >
             Add Institute
           </button>
@@ -246,11 +246,11 @@ const Page = () => {
       {/* TABLE */}
       {loading ? (
         <div className="flex-1 flex items-center justify-center">
-          <Loader2 className="animate-spin text-[#0B5B4D]" size={32} />
+          <Loader2 className="animate-spin text-[#071526]" size={32} />
         </div>
       ) : (
         <div className="flex-1">
-          <div className="border bg-[#EAF6EE] rounded-lg">
+          <div className="border bg-[#EEF1F8] rounded-lg">
             <div className="grid grid-cols-8 py-5 text-sm font-semibold">
               <div className="pl-6 text-center">Sr.No</div>
               <div className="flex items-center justify-center">
@@ -294,7 +294,7 @@ const Page = () => {
                 <div className="text-center">{i.establishedDate}</div>
 
                 <div className="flex gap-2 items-center justify-center">
-                  <Link href={`/dashboard/institute/departments?id=${i.id}`} className="text-[#0B5B4D] underline">View More</Link>
+                  <Link href={`/dashboard/institute/departments?id=${i.id}`} className="text-[#071526] underline">View More</Link>
                 </div>
               </div>
             ))}
@@ -320,7 +320,7 @@ const Page = () => {
           <button
             disabled={currentPage >= totalPages}
             onClick={() => setCurrentPage((p) => p + 1)}
-            className="bg-[#0B5B4D] text-white px-4 py-2 rounded-md"
+            className="bg-[#071526] text-white px-4 py-2 rounded-md"
           >
             Next
           </button>

@@ -371,7 +371,7 @@ const Page = () => {
       {/* HEADER */}
       <section className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-2">
-          <h1 className="text-xl font-bold text-[#1E1E1E]">Database</h1>
+          <h1 className="text-xl font-bold text-[#0a0a14]">Database</h1>
           <input
             type="text"
             placeholder="Search candidates..."
@@ -392,7 +392,7 @@ const Page = () => {
 
           <button
             onClick={handleSingleUpdate}
-            className="flex items-center gap-1 text-[#0B5B4D] border border-[#0B5B4D] text-sm font-medium px-6 py-2.5 rounded-md bg-white"
+            className="flex items-center gap-1 text-[#071526] border border-[#071526] text-sm font-medium px-6 py-2.5 rounded-md bg-white"
           >
             Update Details
           </button>
@@ -422,7 +422,7 @@ const Page = () => {
         <div className="relative">
           <button
             onClick={() => setShowSortMenu(!showSortMenu)}
-            className="flex items-center gap-2 text-sm font-medium text-[#1E1E1E] px-3 py-2 rounded-md border border-gray-200 hover:bg-gray-50"
+            className="flex items-center gap-2 text-sm font-medium text-[#0a0a14] px-3 py-2 rounded-md border border-gray-200 hover:bg-gray-50"
           >
             Sort <ArrowUpDown size={16} />
             {sortKey && (
@@ -447,7 +447,7 @@ const Page = () => {
 
                 <button
                   onClick={clearSort}
-                  className="w-full text-left px-3 py-2 rounded hover:bg-gray-50 text-sm text-[#0B5B4D] font-medium mt-2"
+                  className="w-full text-left px-3 py-2 rounded hover:bg-gray-50 text-sm text-[#071526] font-medium mt-2"
                 >
                   Clear sort
                 </button>
@@ -460,13 +460,13 @@ const Page = () => {
       {/* TABLE */}
       {loading ? (
         <div className="flex-1 flex items-center justify-center">
-          <Loader2 className="animate-spin text-[#0B5B4D]" size={32} />
+          <Loader2 className="animate-spin text-[#071526]" size={32} />
         </div>
       ) : (
         <div className="flex-1 relative">
           <div className="absolute inset-0 overflow-y-auto pr-2">
-            <div className="border border-[#69BE81] bg-[#EAF6EE] rounded-lg">
-              <div className="grid grid-cols-8 py-3 text-xs font-semibold text-[#1E1E1E]">
+            <div className="border border-[#9FB3C8] bg-[#EEF1F8] rounded-lg">
+              <div className="grid grid-cols-8 py-3 text-xs font-semibold text-[#0a0a14]">
                 <div className="pl-6 text-center">No</div>
 
                 <div className="flex items-center justify-center">
@@ -541,14 +541,14 @@ const Page = () => {
                                 onCheckedChange={(value) =>
                                   handleToggleActive(c.id, value)
                                 }
-                                className="scale-75 origin-center data-[state=checked]:bg-[#0B5B4D]"
+                                className="scale-75 origin-center data-[state=checked]:bg-[#071526]"
                               />
                             </div>
                           </TooltipTrigger>
                           <TooltipContent
                             side="bottom"
                             align="center"
-                            className="bg-[#0B5B4D] text-white text-xs fill-[#0B5B4D] border-none"
+                            className="bg-[#071526] text-white text-xs fill-[#071526] border-none"
                           >
                             Clicking here will deactivate this candidate’s
                             profile <br /> which will not let the candidate to
@@ -568,7 +568,7 @@ const Page = () => {
                           <TooltipContent
                             side="bottom"
                             align="center"
-                            className="bg-[#0B5B4D] text-white text-xs px-2 py-1"
+                            className="bg-[#071526] text-white text-xs px-2 py-1"
                           >
                             View Profile
                           </TooltipContent>
@@ -590,7 +590,7 @@ const Page = () => {
                           <TooltipContent
                             side="bottom"
                             align="center"
-                            className="bg-[#0B5B4D] text-white text-xs px-2 py-1"
+                            className="bg-[#071526] text-white text-xs px-2 py-1"
                           >
                             View Scorecard
                           </TooltipContent>
@@ -604,7 +604,7 @@ const Page = () => {
                             >
                               <CircleCheck
                                 size={16}
-                                className={`${c.qualified ? "fill-[#0B5B4D] text-white" : ""
+                                className={`${c.qualified ? "fill-[#071526] text-white" : ""
                                   }`}
                               />
                             </button>
@@ -612,7 +612,7 @@ const Page = () => {
                           <TooltipContent
                             side="bottom"
                             align="center"
-                            className="bg-[#0B5B4D] text-white text-xs px-2 py-1"
+                            className="bg-[#071526] text-white text-xs px-2 py-1"
                           >
                             Mark As Qualified
                           </TooltipContent>
@@ -630,7 +630,7 @@ const Page = () => {
                           <TooltipContent
                             side="bottom"
                             align="center"
-                            className="bg-[#0B5B4D] text-white text-xs px-2 py-1"
+                            className="bg-[#071526] text-white text-xs px-2 py-1"
                           >
                             Delete User
                           </TooltipContent>
@@ -655,7 +655,7 @@ const Page = () => {
           <button
             onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
             disabled={currentPage === 1}
-            className="px-6 py-2 border border-[#0B5B4D] rounded-md text-[#0B5B4D] disabled:opacity-50"
+            className="px-6 py-2 border border-[#071526] rounded-md text-[#071526] disabled:opacity-50"
           >
             Prev
           </button>
@@ -663,7 +663,7 @@ const Page = () => {
           <button
             onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
             disabled={currentPage === totalPages}
-            className="px-6 py-2 bg-[#0B5B4D] text-white rounded-md disabled:opacity-50"
+            className="px-6 py-2 bg-[#071526] text-white rounded-md disabled:opacity-50"
           >
             Next
           </button>
@@ -708,7 +708,7 @@ const ProfileCompletion = ({ value }: any) => {
         cx="20"
         cy="20"
         r={radius}
-        stroke="#27CC53"
+        stroke="#9FB3C8"
         strokeWidth="4"
         fill="none"
         strokeDasharray={circumference}

@@ -101,7 +101,7 @@ export default function PerformancePage() {
           setScoreDistribution([
             { label: "0-30", visitors: low, fill: "#FF672E" },   
             { label: "31-60", visitors: mid, fill: "#FFE176" },  
-            { label: "61-100", visitors: high, fill: "#94D75B" },
+            { label: "61-100", visitors: high, fill: "#9FB3C8" },
           ]);
         }
 
@@ -173,9 +173,9 @@ export default function PerformancePage() {
               <p className="text-gray-400 text-sm mt-1">{assessmentDetails?.category || "Practice Assessment"}</p>
           </div>
           <div className="flex flex-wrap gap-3">
-            <Badge className="bg-[#E0FFE8] text-[#0B5B4D] border-[#0B5B4D]/10 px-3 py-1">Domain Based</Badge>
+            <Badge className="bg-[#EEF1F8] text-[#071526] border-[#071526]/10 px-3 py-1">Domain Based</Badge>
             <div className="border border-gray-100 text-xs px-3 py-1.5 rounded-full flex items-center gap-2 text-gray-600 bg-gray-50/50">
-              <Clock size={14} className="text-[#0B5B4D]"/> {assessmentDetails?.total_test_time || 0} mins
+              <Clock size={14} className="text-[#071526]"/> {assessmentDetails?.total_test_time || 0} mins
             </div>
             <div className="border border-gray-200 text-xs px-3 py-1.5 rounded-full text-gray-600 bg-gray-50/50">
               Questions: {assessmentDetails?.total_questions || assessmentDetails?.mcqs?.length || 0} 
@@ -205,7 +205,7 @@ export default function PerformancePage() {
                 <div className="w-3 h-3 bg-[#FFE176] rounded-sm"></div> 31-60 (Mid)
               </div>
               <div className="flex gap-2 items-center text-xs font-medium text-gray-600">
-                <div className="w-3 h-3 bg-[#94D75B] rounded-sm"></div> 61-100 (High)
+                <div className="w-3 h-3 bg-[#9FB3C8] rounded-sm"></div> 61-100 (High)
               </div>
             </div>
             <div className="flex-1 flex justify-center">

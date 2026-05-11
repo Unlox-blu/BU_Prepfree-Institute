@@ -143,7 +143,7 @@ export default function QuestionAnswerSidebar({
       />
       <div className="fixed top-0 right-0 h-full w-[40vw] bg-white z-50 shadow-2xl transform transition-transform duration-300 flex flex-col animate-in slide-in-from-right-5 border-l">
         <div className="p-6 border-b flex justify-between items-center bg-gray-50/50">
-          <h2 className="text-lg font-semibold text-[#0B5B4D]">
+          <h2 className="text-lg font-semibold text-[#071526]">
             {initialQuestion ? "Edit Question" : "Add New Question"}
           </h2>
           <Button variant="ghost" size="icon" onClick={onClose}><X size={20} /></Button>
@@ -177,25 +177,25 @@ export default function QuestionAnswerSidebar({
           </div>
 
           <div>
-            <label className="text-base font-medium mb-2 block text-[#1E1E1E]">Question {questionNumber}:</label>
+            <label className="text-base font-medium mb-2 block text-[#0a0a14]">Question {questionNumber}:</label>
             <Textarea
               placeholder="Write down your question here..."
               value={currentQ.question}
               onChange={(e) => setCurrentQ((s) => ({ ...s, question: e.target.value }))}
-              className="min-h-[100px] focus:border-[#0B5B4D] resize-none"
+              className="min-h-[100px] focus:border-[#071526] resize-none"
             />
           </div>
 
           <div>
             <div className="flex justify-between items-center mb-3">
-              <h3 className="font-medium text-[#1E1E1E]">Options</h3>
+              <h3 className="font-medium text-[#0a0a14]">Options</h3>
               <span className="text-xs text-gray-500">Select the correct answer</span>
             </div>
             <div className="flex flex-col gap-3">
               {currentQ.options?.map((opt, idx) => {
                 const isSelected = currentQ.correctOptionIndex === idx;
                 return (
-                  <div key={idx} className={`flex items-center gap-3 p-3 border rounded-lg transition-all ${isSelected ? "border-[#0B5B4D] bg-[#F0FDF4] shadow-sm" : "border-gray-200 bg-white"}`}>
+                  <div key={idx} className={`flex items-center gap-3 p-3 border rounded-lg transition-all ${isSelected ? "border-[#071526] bg-[#F0FDF4] shadow-sm" : "border-gray-200 bg-white"}`}>
                     <div className="text-gray-300 cursor-grab"><MoreHorizontal className="rotate-90" size={16} /></div>
                     <div className="relative flex items-center">
                       <input
@@ -203,7 +203,7 @@ export default function QuestionAnswerSidebar({
                         name={`correct_opt_${currentQ.id}`}
                         checked={isSelected}
                         onChange={() => setCurrentQ((s) => ({ ...s, correctOptionIndex: idx }))}
-                        className="peer w-5 h-5 cursor-pointer appearance-none border border-gray-300 rounded-full checked:border-[#0B5B4D] checked:border-4 transition-all"
+                        className="peer w-5 h-5 cursor-pointer appearance-none border border-gray-300 rounded-full checked:border-[#071526] checked:border-4 transition-all"
                       />
                     </div>
                     <input
@@ -213,19 +213,19 @@ export default function QuestionAnswerSidebar({
                       value={opt}
                       onChange={(e) => handleOptionChange(idx, e.target.value)}
                     />
-                    {isSelected && <CheckCircle size={18} className="text-[#0B5B4D]" />}
+                    {isSelected && <CheckCircle size={18} className="text-[#071526]" />}
                     <Button variant="ghost" size="icon" onClick={() => removeOption(idx)} className="text-gray-400 hover:text-red-500 h-8 w-8"><Trash2 size={16} /></Button>
                   </div>
                 );
               })}
             </div>
             <div className="flex gap-2 mt-4">
-              <Button variant="outline" onClick={addOption} className="flex-1 border-dashed text-gray-500 hover:text-[#0B5B4D] hover:border-[#0B5B4D]"><Plus size={16} className="mr-2"/> Add Option</Button>
+              <Button variant="outline" onClick={addOption} className="flex-1 border-dashed text-gray-500 hover:text-[#071526] hover:border-[#071526]"><Plus size={16} className="mr-2"/> Add Option</Button>
             </div>
           </div>
 
           <div>
-            <label className="text-sm font-medium mb-2 block text-[#1E1E1E]">Answer Reasoning <span className="text-red-500">*</span></label>
+            <label className="text-sm font-medium mb-2 block text-[#0a0a14]">Answer Reasoning <span className="text-red-500">*</span></label>
             <Textarea
               placeholder="Explain why the correct answer is correct..."
               value={currentQ.answerReasoning || ""}
@@ -251,7 +251,7 @@ export default function QuestionAnswerSidebar({
 
         <div className="p-4 border-t border-gray-100 bg-white flex justify-end gap-3">
           <Button variant="outline" onClick={onClose}>Cancel</Button>
-          <Button onClick={handleSave} className="bg-[#0B5B4D] hover:bg-[#094d41]">Save Changes</Button>
+          <Button onClick={handleSave} className="bg-[#071526] hover:bg-[#094d41]">Save Changes</Button>
         </div>
       </div>
     </>

@@ -25,7 +25,7 @@ const EducationSection = ({ data }: { data: FormData }) => {
     <div className="w-full flex flex-col gap-2">
       {/* Header */}
       <div className="flex justify-between items-center">
-        <h1 className="text-[#1E1E1E] font-bold text-lg">Education</h1>
+        <h1 className="text-[#0a0a14] font-bold text-lg">Education</h1>
       </div>
 
       {/* Cards */}
@@ -41,7 +41,7 @@ const EducationSection = ({ data }: { data: FormData }) => {
                   <Image src={eduIcon} alt="experience" />
                 </div>
                 <div className="flex flex-col gap-1">
-                  <h2 className="text-md font-semibold text-[#1E1E1E]">
+                  <h2 className="text-md font-semibold text-[#0a0a14]">
                     {edu.school}
                   </h2>
                   <p className="text-sm font-semibold text-[#333]">

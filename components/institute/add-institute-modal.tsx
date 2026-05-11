@@ -127,7 +127,7 @@ export default function AddInstituteModal({
 
           <button
             onClick={handleSave}
-            className="px-6 py-2 bg-[#0B5B4D] text-white rounded-md flex items-center gap-2"
+            className="px-6 py-2 bg-[#071526] text-white rounded-md flex items-center gap-2"
             disabled={isLoading}
           >
             {isLoading && <Loader2 className="w-4 h-4 animate-spin" />}

@@ -92,7 +92,7 @@ export function NavUser({
             >
               <Avatar className="h-8 w-8 rounded-full">
                 <AvatarImage src={user.avatar} alt={user.name} />
-                <AvatarFallback className="rounded-lg bg-[#002830] text-white border border-white/10 font-medium">
+                <AvatarFallback className="rounded-lg bg-[#071526] text-white border border-white/10 font-medium">
                   {initials}
                 </AvatarFallback>
               </Avatar>

@@ -129,7 +129,7 @@ export default function EditCandidateModal({ data, onClose, onSuccess }: any) {
               <Switch
                 checked={isActive}
                 onCheckedChange={(v) => setIsActive(v)}
-                className="data-[state=checked]:bg-[#0B5B4D]"
+                className="data-[state=checked]:bg-[#071526]"
               />
               <span className="text-sm">{isActive ? "Active" : "Inactive"}</span>
             </div>
@@ -142,7 +142,7 @@ export default function EditCandidateModal({ data, onClose, onSuccess }: any) {
               <Switch
                 checked={qualified}
                 onCheckedChange={(v) => setQualified(v)}
-                className="data-[state=checked]:bg-[#0B5B4D]"
+                className="data-[state=checked]:bg-[#071526]"
               />
               <span className="text-sm">{qualified ? "Yes" : "No"}</span>
             </div>
@@ -160,7 +160,7 @@ export default function EditCandidateModal({ data, onClose, onSuccess }: any) {
           <button
             onClick={handleUpdate}
             disabled={loading}
-            className="bg-[#0B5B4D] text-white px-6 py-2 rounded-md flex items-center justify-center gap-2"
+            className="bg-[#071526] text-white px-6 py-2 rounded-md flex items-center justify-center gap-2"
           >
             {loading && <Loader2 className="w-4 h-4 animate-spin" />}
             Manage Candidate

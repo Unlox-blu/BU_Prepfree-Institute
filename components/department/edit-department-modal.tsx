@@ -65,7 +65,7 @@ export default function EditDepartmentModal({
           <button
             onClick={handleUpdate}
             disabled={loading}
-            className="bg-[#0B5B4D] text-white rounded-md py-2"
+            className="bg-[#071526] text-white rounded-md py-2"
           >
             {loading ? <Loader2 className="animate-spin mx-auto" /> : "Update"}
           </button>

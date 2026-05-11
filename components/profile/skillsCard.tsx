@@ -96,12 +96,12 @@ const SkillsSection = ({ formData, setFormData, user }: any) => {
     <div className="w-full flex flex-col gap-2">
       {/* Header */}
       <div className="flex justify-between items-center">
-        <h1 className="text-[#1E1E1E] font-bold text-lg">Skills</h1>
+        <h1 className="text-[#0a0a14] font-bold text-lg">Skills</h1>
 
         {user?.skills?.length > 0 && !editMode && (
           <button
             onClick={() => setEditMode(true)}
-            className="flex items-center gap-1 cursor-pointer text-black hover:text-[#0B5B4D] font-medium"
+            className="flex items-center gap-1 cursor-pointer text-black hover:text-[#071526] font-medium"
           >
             <Pen size={16} /> Edit
           </button>
@@ -118,7 +118,7 @@ const SkillsSection = ({ formData, setFormData, user }: any) => {
 
             <button
               onClick={() => setEditMode(true)}
-              className="text-[#0B5B4D] font-medium cursor-pointer"
+              className="text-[#071526] font-medium cursor-pointer"
             >
               + Add Skills
             </button>
@@ -145,7 +145,7 @@ const SkillsSection = ({ formData, setFormData, user }: any) => {
 
               <button
                 onClick={handleAdd}
-                className="px-5 py-2 bg-[#0B5B4D] text-white rounded-md font-medium"
+                className="px-5 py-2 bg-[#071526] text-white rounded-md font-medium"
               >
                 Add
               </button>
@@ -154,11 +154,11 @@ const SkillsSection = ({ formData, setFormData, user }: any) => {
 
           {/* Existing Editable Skills */}
           {formData.skills.length > 0 && (
-            <div className="flex flex-wrap gap-3 bg-[#EAFFF0] p-4 rounded-lg">
+            <div className="flex flex-wrap gap-3 bg-[#EEF1F8] p-4 rounded-lg">
               {formData?.skills?.map((skill: any, idx: number) => (
                 <div
                   key={idx}
-                  className="flex items-center gap-2 bg-white border-2 border-[#0B5B4D] px-4 py-2 rounded-full text-[#0B5B4D]"
+                  className="flex items-center gap-2 bg-white border-2 border-[#071526] px-4 py-2 rounded-full text-[#071526]"
                 >
                   <span>{skill.name}</span>
                   <button onClick={() => handleDelete(idx)}>
@@ -170,7 +170,7 @@ const SkillsSection = ({ formData, setFormData, user }: any) => {
           )}
 
           {/* Suggested */}
-          <div className="w-full bg-[#EAFFF0] rounded-xl p-5">
+          <div className="w-full bg-[#EEF1F8] rounded-xl p-5">
             <h1 className="text-lg font-medium">Suggested by your profile</h1>
             <p className="text-sm text-black/40">Add Your Best 6 Skills</p>
 
@@ -180,7 +180,7 @@ const SkillsSection = ({ formData, setFormData, user }: any) => {
                   <div
                     key={idx}
                     onClick={() => handleSelectSuggested(item)}
-                    className="cursor-pointer bg-white border-2 border-[#0B5B4D] px-4 py-2 rounded-full text-[#0B5B4D]"
+                    className="cursor-pointer bg-white border-2 border-[#071526] px-4 py-2 rounded-full text-[#071526]"
                   >
                     + {item}
                   </div>
@@ -197,7 +197,7 @@ const SkillsSection = ({ formData, setFormData, user }: any) => {
 
             <button
               onClick={handleSave}
-              className="px-8 py-2 bg-[#0B5B4D] text-white border-2 border-[#0B5B4D] rounded-md ml-2"
+              className="px-8 py-2 bg-[#071526] text-white border-2 border-[#071526] rounded-md ml-2"
             >
               Save
             </button>
@@ -211,7 +211,7 @@ const SkillsSection = ({ formData, setFormData, user }: any) => {
           {user?.skills?.map((skill: any, idx: number) => (
             <div
               key={idx}
-              className="bg-[#E7FEEE] text-black font-medium text-sm px-4 py-2 rounded-full"
+              className="bg-[#EEF1F8] text-black font-medium text-sm px-4 py-2 rounded-full"
             >
               {skill.name}
             </div>

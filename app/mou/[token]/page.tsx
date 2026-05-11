@@ -64,7 +64,7 @@ const getInstituteStatusDisplay = (status: MouStatus) => {
         case "students_uploaded": return { label: "Under Admin Review", className: "bg-amber-100 text-amber-700" };
         case "users_data_received": return { label: "Processing Student Data", className: "bg-amber-100 text-amber-700" };
         case "users_onboarded": return { label: "Users Onboarded", className: "bg-indigo-100 text-indigo-700" };
-        case "credentials_sent": return { label: "Onboarding Complete", className: "bg-[#0B5B4D]/10 text-[#0B5B4D]" };
+        case "credentials_sent": return { label: "Onboarding Complete", className: "bg-[#071526]/10 text-[#071526]" };
         default: return { label: "Unknown", className: "bg-gray-100 text-gray-700" };
     }
 };
@@ -336,7 +336,7 @@ export default function PublicMouPage({ params }: { params: Promise<{ token: str
         return (
             <div className="min-h-screen bg-gray-50 flex items-center justify-center">
                 <div className="text-center space-y-3">
-                    <Loader2 className="animate-spin text-[#0B5B4D] mx-auto" size={36} />
+                    <Loader2 className="animate-spin text-[#071526] mx-auto" size={36} />
                     <p className="text-sm text-gray-500">Sending verification code to your email…</p>
                 </div>
             </div>
@@ -357,7 +357,7 @@ export default function PublicMouPage({ params }: { params: Promise<{ token: str
                     </p>
                     <button
                         onClick={() => { setOtpInput(""); sendOtp(); }}
-                        className="w-full flex items-center justify-center gap-2 bg-[#0B5B4D] hover:bg-[#074238] text-white font-medium py-2.5 px-4 rounded-lg transition"
+                        className="w-full flex items-center justify-center gap-2 bg-[#071526] hover:bg-[#074238] text-white font-medium py-2.5 px-4 rounded-lg transition"
                     >
                         <ShieldCheck size={16} />
                         Verify Again
@@ -386,8 +386,8 @@ export default function PublicMouPage({ params }: { params: Promise<{ token: str
             <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-6">
                 <div className="bg-white rounded-2xl shadow-md p-8 max-w-sm w-full border border-gray-100">
                     <div className="text-center mb-6">
-                        <div className="w-14 h-14 rounded-full bg-[#EAF6EE] flex items-center justify-center mx-auto mb-4">
-                            <ShieldCheck size={28} className="text-[#0B5B4D]" />
+                        <div className="w-14 h-14 rounded-full bg-[#EEF1F8] flex items-center justify-center mx-auto mb-4">
+                            <ShieldCheck size={28} className="text-[#071526]" />
                         </div>
                         <h1 className="text-xl font-bold text-gray-900 mb-1">Verify Your Identity</h1>
                         {rateLimited ? (
@@ -426,7 +426,7 @@ export default function PublicMouPage({ params }: { params: Promise<{ token: str
                                     if (e.key === "Enter") handleVerifyOtp();
                                 }}
                                 onFocus={e => e.target.select()}
-                                className="w-11 h-12 text-center text-xl font-bold border-2 rounded-lg outline-none focus:ring-2 focus:ring-[#0B5B4D]/30 focus:border-[#0B5B4D] transition text-gray-900"
+                                className="w-11 h-12 text-center text-xl font-bold border-2 rounded-lg outline-none focus:ring-2 focus:ring-[#071526]/30 focus:border-[#071526] transition text-gray-900"
                             />
                         ))}
                     </div>
@@ -434,7 +434,7 @@ export default function PublicMouPage({ params }: { params: Promise<{ token: str
                     <button
                         onClick={handleVerifyOtp}
                         disabled={otpVerifying || otpInput.length !== 6}
-                        className="w-full flex items-center justify-center gap-2 bg-[#0B5B4D] hover:bg-[#074238] text-white font-medium py-2.5 px-4 rounded-lg transition disabled:opacity-50 mb-3"
+                        className="w-full flex items-center justify-center gap-2 bg-[#071526] hover:bg-[#074238] text-white font-medium py-2.5 px-4 rounded-lg transition disabled:opacity-50 mb-3"
                     >
                         {otpVerifying ? <Loader2 size={16} className="animate-spin" /> : <Send size={16} />}
                         {otpVerifying ? "Verifying…" : "Verify & Continue"}
@@ -466,7 +466,7 @@ export default function PublicMouPage({ params }: { params: Promise<{ token: str
         <div className="min-h-screen bg-gray-50 flex flex-col items-center">
 
             {/* Full Width Header */}
-            <header className="w-full bg-[#0B5B4D] py-4 px-6 md:px-12 flex items-center shadow-md justify-between">
+            <header className="w-full bg-[#071526] py-4 px-6 md:px-12 flex items-center shadow-md justify-between">
                 <Image
                     src="/images/logo.png"
                     alt="PrepFree Logo"
@@ -537,8 +537,8 @@ export default function PublicMouPage({ params }: { params: Promise<{ token: str
 
                             {/* Header */}
                             <div className="flex items-center gap-3 mb-6">
-                                <div className="w-10 h-10 rounded-xl bg-[#EAF6EE] flex items-center justify-center">
-                                    <ClipboardCheck size={15} className="text-[#0B5B4D]" />
+                                <div className="w-10 h-10 rounded-xl bg-[#EEF1F8] flex items-center justify-center">
+                                    <ClipboardCheck size={15} className="text-[#071526]" />
                                 </div>
                                 <div>
                                     <h2 className="text-lg font-semibold text-[#1E1E1E]">Actions:</h2>
@@ -547,17 +547,17 @@ export default function PublicMouPage({ params }: { params: Promise<{ token: str
 
                             {/* Dynamic Action Area */}
                             {mou.status === "credentials_sent" ? (
-                                <div className="bg-[#EAF6EE] border border-green-200 rounded-xl p-6 text-center shadow-sm">
-                                    <CheckCircle2 size={48} className="text-[#0B5B4D] mx-auto mb-3" />
-                                    <p className="font-bold text-lg text-[#0B5B4D] mb-1">Onboarding Complete!</p>
-                                    <p className="text-sm text-[#0B5B4D]/80 mb-6">
+                                <div className="bg-[#EEF1F8] border border-green-200 rounded-xl p-6 text-center shadow-sm">
+                                    <CheckCircle2 size={48} className="text-[#071526] mx-auto mb-3" />
+                                    <p className="font-bold text-lg text-[#071526] mb-1">Onboarding Complete!</p>
+                                    <p className="text-sm text-[#071526]/80 mb-6">
                                         The administration has generated credentials and sent securely via emails for your institute and students.
                                     </p>
 
                                     <div className="space-y-3 w-full">
                                         {/* Student Portal Link */}
                                         <div className="bg-white rounded-lg border border-green-100 p-3 shadow-sm text-left">
-                                            <p className="text-xs font-bold text-[#0B5B4D] uppercase tracking-wider mb-2">Student Portal</p>
+                                            <p className="text-xs font-bold text-[#071526] uppercase tracking-wider mb-2">Student Portal</p>
                                             <div className="flex items-center gap-2">
                                                 <input
                                                     type="text"
@@ -570,7 +570,7 @@ export default function PublicMouPage({ params }: { params: Promise<{ token: str
                                                         navigator.clipboard.writeText("https://learner.prepfree.in");
                                                         toast.success("Student Portal link copied!");
                                                     }}
-                                                    className="p-2 bg-[#EAF6EE] hover:bg-[#d6f0df] text-[#0B5B4D] rounded transition-colors"
+                                                    className="p-2 bg-[#EEF1F8] hover:bg-[#d6f0df] text-[#071526] rounded transition-colors"
                                                     title="Copy Student Portal Link"
                                                 >
                                                     <Copy size={16} />
@@ -580,7 +580,7 @@ export default function PublicMouPage({ params }: { params: Promise<{ token: str
 
                                         {/* Institute Portal Link */}
                                         <div className="bg-white rounded-lg border border-green-100 p-3 shadow-sm text-left">
-                                            <p className="text-xs font-bold text-[#0B5B4D] uppercase tracking-wider mb-2">Institute Portal</p>
+                                            <p className="text-xs font-bold text-[#071526] uppercase tracking-wider mb-2">Institute Portal</p>
                                             <div className="flex items-center gap-2">
                                                 <input
                                                     type="text"
@@ -593,7 +593,7 @@ export default function PublicMouPage({ params }: { params: Promise<{ token: str
                                                         navigator.clipboard.writeText("https://institute.prepfree.in");
                                                         toast.success("Institute Portal link copied!");
                                                     }}
-                                                    className="p-2 bg-[#EAF6EE] hover:bg-[#d6f0df] text-[#0B5B4D] rounded transition-colors"
+                                                    className="p-2 bg-[#EEF1F8] hover:bg-[#d6f0df] text-[#071526] rounded transition-colors"
                                                     title="Copy Institute Portal Link"
                                                 >
                                                     <Copy size={16} />
@@ -630,7 +630,7 @@ export default function PublicMouPage({ params }: { params: Promise<{ token: str
                                     <p className="text-xs text-gray-500 mb-4">
                                         The MOU has been approved! Please upload the student data list (Excel format, .xlsx) for cohort creation.
                                     </p>
-                                    <label className={`w-full flex items-center justify-center gap-2 bg-[#0B5B4D] hover:bg-[#084238] text-white font-medium py-3 px-4 rounded-lg transition cursor-pointer ${uploading ? 'opacity-50 pointer-events-none' : ''}`}>
+                                    <label className={`w-full flex items-center justify-center gap-2 bg-[#071526] hover:bg-[#084238] text-white font-medium py-3 px-4 rounded-lg transition cursor-pointer ${uploading ? 'opacity-50 pointer-events-none' : ''}`}>
                                         {uploading ? <Loader2 className="animate-spin" size={18} /> : <Upload size={18} />}
                                         {uploading ? "Uploading..." : "Submit Student Data (.xlsx)"}
                                         <input
@@ -658,7 +658,7 @@ export default function PublicMouPage({ params }: { params: Promise<{ token: str
                                         </div>
                                     )}
                                     <p className="text-xs text-gray-500">
-                                        For further clarification, please contact <a href="mailto:support@prepfree.in" className="text-[#0B5B4D] font-medium hover:underline">support@prepfree.in</a>
+                                        For further clarification, please contact <a href="mailto:support@prepfree.in" className="text-[#071526] font-medium hover:underline">support@prepfree.in</a>
                                     </p>
                                 </div>
 
@@ -677,7 +677,7 @@ export default function PublicMouPage({ params }: { params: Promise<{ token: str
                                         </div>
                                     )}
                                     <p className="text-xs text-gray-500">
-                                        If you believe this is an error or need further assistance, please contact <a href="mailto:support@prepfree.in" className="text-[#0B5B4D] font-medium hover:underline">support@prepfree.in</a>
+                                        If you believe this is an error or need further assistance, please contact <a href="mailto:support@prepfree.in" className="text-[#071526] font-medium hover:underline">support@prepfree.in</a>
                                     </p>
                                 </div>
 
@@ -710,14 +710,14 @@ export default function PublicMouPage({ params }: { params: Promise<{ token: str
                                         <button
                                             onClick={() => handleDownloadFile(mou.mou_url!, `${mou.institute_name} - Original MOU.pdf`)}
                                             disabled={downloadingUrl === mou.mou_url}
-                                            className="w-full flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-[#0B5B4D] border border-gray-200 font-medium py-2.5 px-4 rounded-lg transition mb-4 disabled:opacity-50 shadow-sm"
+                                            className="w-full flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-[#071526] border border-gray-200 font-medium py-2.5 px-4 rounded-lg transition mb-4 disabled:opacity-50 shadow-sm"
                                         >
                                             {downloadingUrl === mou.mou_url ? <Loader2 className="animate-spin" size={18} /> : <Download size={18} />}
                                             Download MOU Document
                                         </button>
                                     )}
 
-                                    <label className={`w-full flex items-center justify-center gap-2 bg-[#0B5B4D] hover:bg-[#074238] text-white font-medium py-3 px-4 rounded-lg transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed ${uploading ? 'opacity-50 pointer-events-none' : ''}`}>
+                                    <label className={`w-full flex items-center justify-center gap-2 bg-[#071526] hover:bg-[#074238] text-white font-medium py-3 px-4 rounded-lg transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed ${uploading ? 'opacity-50 pointer-events-none' : ''}`}>
                                         {uploading ? <Loader2 className="animate-spin" size={18} /> : <Upload size={18} />}
                                         {uploading ? "Uploading..." : "Submit Signed MOU Document"}
                                         <input
@@ -751,13 +751,13 @@ export default function PublicMouPage({ params }: { params: Promise<{ token: str
                                     {/* Original MOU */}
                                     <div className="flex items-center justify-between p-3 rounded-lg border border-gray-100 bg-gray-50/50 hover:bg-gray-50 transition">
                                         <div className="flex items-center gap-2 text-sm text-gray-700 font-medium">
-                                            <FileText size={16} className="text-[#0B5B4D]" />
+                                            <FileText size={16} className="text-[#071526]" />
                                             MOU Document
                                         </div>
                                         {mou.mou_url ? (
                                             <button onClick={() => handleDownloadFile(mou.mou_url!, `${mou.institute_name} - MOU Document.pdf`)}
                                                 disabled={downloadingUrl === mou.mou_url}
-                                                className="text-[#0B5B4D] bg-[#EAF6EE] hover:bg-[#0B5B4D] hover:text-white p-2 rounded transition-colors flex items-center justify-center disabled:opacity-50"
+                                                className="text-[#071526] bg-[#EEF1F8] hover:bg-[#071526] hover:text-white p-2 rounded transition-colors flex items-center justify-center disabled:opacity-50"
                                                 title="View Document"
                                             >
                                                 {downloadingUrl === mou.mou_url ? <Loader2 size={16} className="animate-spin" /> : <Eye size={16} />}
@@ -770,13 +770,13 @@ export default function PublicMouPage({ params }: { params: Promise<{ token: str
                                     {/* Signed MOU */}
                                     <div className="flex items-center justify-between p-3 rounded-lg border border-gray-100 bg-gray-50/50 hover:bg-gray-50 transition">
                                         <div className="flex items-center gap-2 text-sm text-gray-700 font-medium">
-                                            <FileText size={16} className="text-[#0B5B4D]" />
+                                            <FileText size={16} className="text-[#071526]" />
                                             Signed MOU Document
                                         </div>
                                         {mou.signed_mou_url ? (
                                             <button onClick={() => handleDownloadFile(mou.signed_mou_url!, `${mou.institute_name} - Signed MOU.pdf`)}
                                                 disabled={downloadingUrl === mou.signed_mou_url}
-                                                className="text-[#0B5B4D] bg-[#EAF6EE] hover:bg-[#0B5B4D] hover:text-white p-2 rounded transition-colors flex items-center justify-center disabled:opacity-50"
+                                                className="text-[#071526] bg-[#EEF1F8] hover:bg-[#071526] hover:text-white p-2 rounded transition-colors flex items-center justify-center disabled:opacity-50"
                                                 title="View Document"
                                             >
                                                 {downloadingUrl === mou.signed_mou_url ? <Loader2 size={16} className="animate-spin" /> : <Eye size={16} />}
@@ -789,13 +789,13 @@ export default function PublicMouPage({ params }: { params: Promise<{ token: str
                                     {/* Student Data */}
                                     <div className="flex items-center justify-between p-3 rounded-lg border border-gray-100 bg-gray-50/50 hover:bg-gray-50 transition">
                                         <div className="flex items-center gap-2 text-sm text-gray-700 font-medium">
-                                            <FileText size={16} className="text-[#0B5B4D]" />
+                                            <FileText size={16} className="text-[#071526]" />
                                             Student Data
                                         </div>
                                         {mou.student_xlsx_url ? (
                                             <button onClick={() => handleDownloadFile(mou.student_xlsx_url!, `${mou.institute_name} - Students.xlsx`)}
                                                 disabled={downloadingUrl === mou.student_xlsx_url}
-                                                className="text-[#0B5B4D] bg-[#EAF6EE] hover:bg-[#0B5B4D] hover:text-white p-2 rounded transition-colors flex items-center justify-center disabled:opacity-50"
+                                                className="text-[#071526] bg-[#EEF1F8] hover:bg-[#071526] hover:text-white p-2 rounded transition-colors flex items-center justify-center disabled:opacity-50"
                                                 title="View Document"
                                             >
                                                 {downloadingUrl === mou.student_xlsx_url ? <Loader2 size={16} className="animate-spin" /> : <Eye size={16} />}

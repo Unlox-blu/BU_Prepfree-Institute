@@ -144,7 +144,7 @@ const page = () => {
          <span>/</span>
          <span onClick={() => router.push(`/dashboard/assessment/${assessmentId}`)} className="cursor-pointer hover:text-gray-900 transition-colors">Assessment</span>
          <span>/</span>
-         <span className="text-[#0B5B4D] font-semibold">{studentName || "Candidate Report"}</span>
+         <span className="text-[#071526] font-semibold">{studentName || "Candidate Report"}</span>
       </div>
 
       {/* Header */}
@@ -152,7 +152,7 @@ const page = () => {
         <h1 className="text-lg text-[#1E1E1E] font-semibold">
           Your Assessment Performance Report For {testName}
         </h1>
-        <div className="w-fit text-white flex items-center px-4 py-2 bg-[#0B5B4D] rounded-md gap-2 cursor-pointer transition-colors hover:bg-[#094d41] text-sm">
+        <div className="w-fit text-white flex items-center px-4 py-2 bg-[#071526] rounded-md gap-2 cursor-pointer transition-colors hover:bg-[#094d41] text-sm">
           <Download size={15} />
           <h1>Export List</h1>
         </div>
@@ -160,7 +160,7 @@ const page = () => {
 
       <div className="w-full flex flex-col md:flex-row gap-4 h-auto md:h-80 mt-4">
         {/* Left - Semicircular Progress */}
-        <div className="border border-transparent md:h-full rounded-xl bg-gradient-to-b from-[#053F35] to-[#17C1A3] flex flex-col items-center justify-between p-4 w-full md:w-1/3 lg:w-1/4 shadow-sm">
+        <div className="border border-transparent md:h-full rounded-xl bg-gradient-to-b from-[#314370] to-[#9FB3C8] flex flex-col items-center justify-between p-4 w-full md:w-1/3 lg:w-1/4 shadow-sm">
           <h1 className="w-full text-white font-medium text-center">Overall Score</h1>
           <div className="w-full flex items-center justify-center flex-1">
             <SemicircularProgress percentage={pct} size={200} />
@@ -194,10 +194,10 @@ const page = () => {
                 ${
                     queNo === q.id
                     ? q.correct
-                        ? "bg-[#2E8D5D] text-white ring-2 ring-[#2E8D5D] ring-offset-2"
+                        ? "bg-[#314370] text-white ring-2 ring-[#314370] ring-offset-2"
                         : "bg-[#AB0A00] text-white ring-2 ring-[#AB0A00] ring-offset-2"
                     : q.correct
-                    ? "bg-[#D7FFEB] text-[#048746] hover:bg-[#C2F5DD]"
+                    ? "bg-[#EEF1F8] text-[#314370] hover:bg-[#C2F5DD]"
                     : "bg-[#FFE5E5] text-[#B20000] hover:bg-[#FCDCDC]"
                 }
                 `}
@@ -211,7 +211,7 @@ const page = () => {
           <div className="w-full bg-gray-50 rounded-xl p-6 border border-gray-100">
             <div className="flex justify-between items-start gap-4">
                  <h1 className="text-lg font-medium text-gray-900">{currentQuestion.question}</h1>
-                 <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase ${currentQuestion.correct ? "bg-[#E8FFF3] text-[#2E8D5D]" : "bg-[#FFEBE6] text-[#AB0A00]"}`}>
+                 <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase ${currentQuestion.correct ? "bg-[#EEF1F8] text-[#314370]" : "bg-[#FFEBE6] text-[#AB0A00]"}`}>
                      {currentQuestion.correct ? "Correct" : "Incorrect"}
                  </span>
             </div>
@@ -227,12 +227,12 @@ const page = () => {
                     key={option.id}
                     className={`
                         w-full flex items-center gap-3 px-4 py-3 rounded-lg border transition-all
-                        ${isCorrect ? "bg-[#E8FFF3] border-[#048746]" : isWrong ? "bg-[#FFE5E5] border-[#B20000]" : "bg-white border-gray-200"}
+                        ${isCorrect ? "bg-[#EEF1F8] border-[#314370]" : isWrong ? "bg-[#FFE5E5] border-[#B20000]" : "bg-white border-gray-200"}
                     `}
                   >
-                    <span className={`w-5 h-5 rounded-full border flex items-center justify-center shrink-0 ${isCorrect ? "border-[#048746]" : isWrong ? "border-[#B20000]" : "border-gray-400"}`}>
+                    <span className={`w-5 h-5 rounded-full border flex items-center justify-center shrink-0 ${isCorrect ? "border-[#314370]" : isWrong ? "border-[#B20000]" : "border-gray-400"}`}>
                       {(isCorrect || isWrong) && (
-                        <span className={`w-2.5 h-2.5 rounded-full ${isCorrect ? "bg-[#048746]" : "bg-[#B20000]"}`}></span>
+                        <span className={`w-2.5 h-2.5 rounded-full ${isCorrect ? "bg-[#314370]" : "bg-[#B20000]"}`}></span>
                       )}
                     </span>
                     <span className="text-sm font-medium text-gray-800">{option.option}</span>
@@ -273,7 +273,7 @@ export function ChartBarDefault({ questions, queNo }: { questions: FormattedQues
             <defs>
               <linearGradient id="correctGradient" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#DDE9E5" /><stop offset="100%" stopColor="#FFFFFF" /></linearGradient>
               <linearGradient id="wrongGradient" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#FFECE7" /><stop offset="100%" stopColor="#FFFFFF" /></linearGradient>
-              <linearGradient id="currCorrectGradient" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#066841" /> <stop offset="100%" stopColor="#ffffff" /></linearGradient>
+              <linearGradient id="currCorrectGradient" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#314370" /> <stop offset="100%" stopColor="#ffffff" /></linearGradient>
               <linearGradient id="currWrongGradient" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#AD0F05" /> <stop offset="100%" stopColor="#Ffffff" /></linearGradient>
             </defs>
 

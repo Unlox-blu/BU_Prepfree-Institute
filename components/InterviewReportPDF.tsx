@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 24,
         fontWeight: 'bold',
-        color: '#00323C'
+        color: '#071526'
     },
     date: {
         fontSize: 10,
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
 
     // Score Section
     scoreSection: {
-        backgroundColor: '#0B5B4D',
+        backgroundColor: '#071526',
         borderRadius: 8,
         padding: 20,
         flexDirection: 'row',
@@ -56,11 +56,11 @@ const styles = StyleSheet.create({
         padding: 15,
         borderRadius: 8
     },
-    cardTitle: { fontSize: 14, fontWeight: 'bold', marginBottom: 5, color: '#00323C' },
+    cardTitle: { fontSize: 14, fontWeight: 'bold', marginBottom: 5, color: '#071526' },
     cardText: { fontSize: 10, lineHeight: 1.4, color: '#444' },
 
     // Questions
-    sectionTitle: { fontSize: 18, fontWeight: 'bold', color: '#00323C', marginBottom: 15, marginTop: 10 },
+    sectionTitle: { fontSize: 18, fontWeight: 'bold', color: '#071526', marginBottom: 15, marginTop: 10 },
     questionCard: {
         backgroundColor: 'white',
         borderRadius: 8,
@@ -70,8 +70,8 @@ const styles = StyleSheet.create({
     questionHeader: { flexDirection: 'row', justifyContent: 'space-between', marginBottom: 10 },
     qText: { fontSize: 14, fontWeight: 'bold', color: '#333', width: '80%' },
     skillTag: {
-        backgroundColor: '#ECFDF5',
-        color: '#0B5B4D',
+        backgroundColor: '#EEF1F8',
+        color: '#9E2339',
         fontSize: 8,
         paddingVertical: 2,
         paddingHorizontal: 6,
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
         lineHeight: 1.4
     },
     idealAnswerBox: {
-        backgroundColor: '#ECFDF5',
+        backgroundColor: '#EEF1F8',
         padding: 10,
         borderRadius: 4,
         fontSize: 10,
@@ -99,17 +99,17 @@ const styles = StyleSheet.create({
 
     improvementsSection: { marginTop: 5 },
     improvementItem: { flexDirection: 'row', marginBottom: 3 },
-    bullet: { width: 3, height: 3, backgroundColor: '#0B5B4D', borderRadius: 2, marginRight: 5, marginTop: 4 },
+    bullet: { width: 3, height: 3, backgroundColor: '#071526', borderRadius: 2, marginRight: 5, marginTop: 4 },
     improvementText: { fontSize: 10, color: '#444' },
 
     // Behavioral Analysis Styles
     behavioralSection: {
         marginBottom: 20,
-        backgroundColor: '#ECFDF5',
+        backgroundColor: '#EEF1F8',
         borderRadius: 8,
         padding: 15,
         borderWidth: 1,
-        borderColor: '#0B5B4D',
+        borderColor: '#9E2339',
         borderStyle: 'solid'
     },
     behavioralHeader: {
@@ -120,14 +120,14 @@ const styles = StyleSheet.create({
     behavioralIcon: {
         width: 30,
         height: 30,
-        backgroundColor: '#0B5B4D',
+        backgroundColor: '#071526',
         borderRadius: 15,
         marginRight: 10
     },
     behavioralTitle: {
         fontSize: 14,
         fontWeight: 'bold',
-        color: '#00323C'
+        color: '#071526'
     },
     behavioralSummary: {
         fontSize: 10,
@@ -156,7 +156,7 @@ const styles = StyleSheet.create({
     behavioralMetricValue: {
         fontSize: 10,
         fontWeight: 'bold',
-        color: '#00323C'
+        color: '#071526'
     },
     behavioralScore: {
         alignItems: 'center',
@@ -169,7 +169,7 @@ const styles = StyleSheet.create({
     behavioralScoreValue: {
         fontSize: 24,
         fontWeight: 'bold',
-        color: '#0B5B4D'
+        color: '#9E2339'
     },
     behavioralScoreLabel: {
         fontSize: 8,
@@ -186,7 +186,7 @@ const styles = StyleSheet.create({
     emotionDistributionTitle: {
         fontSize: 12,
         fontWeight: 'bold',
-        color: '#00323C',
+        color: '#071526',
         marginBottom: 8
     },
     emotionGrid: {
@@ -212,20 +212,20 @@ const styles = StyleSheet.create({
     emotionValue: {
         fontSize: 9,
         fontWeight: 'bold',
-        color: '#0B5B4D'
+        color: '#9E2339'
     },
     dominantEmotionBadge: {
-        backgroundColor: '#ECFDF5',
+        backgroundColor: '#EEF1F8',
         paddingHorizontal: 8,
         paddingVertical: 3,
         borderRadius: 10,
         borderWidth: 1,
-        borderColor: '#0B5B4D'
+        borderColor: '#9E2339'
     },
     dominantEmotionText: {
         fontSize: 9,
         fontWeight: 'bold',
-        color: '#0B5B4D'
+        color: '#9E2339'
     }
 });
 

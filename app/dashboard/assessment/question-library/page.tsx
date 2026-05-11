@@ -337,7 +337,7 @@ export default function QuestionLibraryPage() {
 
               <button
                 onClick={() => setIsAddSidebarOpen(true)}
-                className="flex items-center gap-2 bg-[#0B5B4D] text-white px-4 py-2 rounded-md"
+                className="flex items-center gap-2 bg-[#071526] text-white px-4 py-2 rounded-md"
               >
                 <Plus size={16} /> Add Question
               </button>
@@ -348,7 +348,7 @@ export default function QuestionLibraryPage() {
             <div className="space-y-5">
               {loading ? (
                 <div className="h-64 flex items-center justify-center">
-                  <Loader2 className="animate-spin text-[#0B5B4D]" />
+                  <Loader2 className="animate-spin text-[#071526]" />
                 </div>
               ) : filtered.length === 0 ? (
                 <div className="h-56 flex items-center justify-center text-gray-400">No questions found.</div>
@@ -389,7 +389,7 @@ export default function QuestionLibraryPage() {
 
             <div className="flex items-center gap-2">
               <button onClick={() => setPage((p) => Math.max(1, p - 1))} className="px-3 py-2 border rounded-md">‹</button>
-              <div className="px-3 py-2 bg-[#0B5B4D] text-white rounded-md">{page}</div>
+              <div className="px-3 py-2 bg-[#071526] text-white rounded-md">{page}</div>
               <button onClick={() => setPage((p) => Math.min(totalPages, p + 1))} className="px-3 py-2 border rounded-md">›</button>
             </div>
           </div>
@@ -644,7 +644,7 @@ function EditDrawer({
           <button
             onClick={() => onSave(local)}
             disabled={saving}
-            className="px-5 py-2 bg-[#0B5B4D] text-white rounded-md disabled:opacity-60"
+            className="px-5 py-2 bg-[#071526] text-white rounded-md disabled:opacity-60"
           >
             {saving ? <Loader2 className="animate-spin" /> : "Save Changes"}
           </button>

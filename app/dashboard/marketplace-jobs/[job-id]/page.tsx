@@ -110,7 +110,7 @@ const Page = () => {
   return (
     <main className="w-full py-2 flex flex-col gap-4">
       <section className="w-full h-[230px] border border-black/20 rounded-lg overflow-hidden bg-white">
-        <div className="w-full h-[40%] bg-gradient-to-r from-[#DEE2E0] via-[#B1FFD0]/30 to-[#B1FFD0]/7 relative"></div>
+        <div className="w-full h-[40%] bg-gradient-to-r from-[#DEE2E0] via-[#9FB3C8]/30 to-[#9FB3C8]/7 relative"></div>
         <div className="flex items-end justify-between h-[60%] px-10 pb-4">
           <div className="flex flex-col gap-0 z-10">
             <div className="bg-white h-24 w-24 border border-black/20 rounded-lg flex items-center justify-center">
@@ -150,7 +150,7 @@ const Page = () => {
             <h1 className="text-lg text-[#18191C] font-bold mt-6">Skills</h1>
             <div className="flex flex-wrap w-full gap-4 mt-2">
               {job.skills.map((item, idx) => (
-                <div key={idx} className="bg-[#F1FEF6] rounded-full px-4 py-2">
+                <div key={idx} className="bg-[#EEF1F8] rounded-full px-4 py-2">
                   <h1 className="text-sm">{item}</h1>
                 </div>
               ))}

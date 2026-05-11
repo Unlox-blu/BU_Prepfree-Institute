@@ -24,7 +24,7 @@ const CertificationSection = ({ data }: { data: FormData }) => {
     <div className="w-full flex flex-col gap-2">
       {/* Header */}
       <div className="flex justify-between items-center">
-        <h1 className="text-[#1E1E1E] font-bold text-lg">Certification</h1>
+        <h1 className="text-[#0a0a14] font-bold text-lg">Certification</h1>
       </div>
 
       {/* Cards */}
@@ -40,7 +40,7 @@ const CertificationSection = ({ data }: { data: FormData }) => {
                   <Image src={certIcon} alt="experience" />
                 </div>
                 <div className="flex flex-col">
-                  <h2 className="text-sm font-semibold text-[#1E1E1E]">
+                  <h2 className="text-sm font-semibold text-[#0a0a14]">
                     {cert.name}
                   </h2>
                   <p className="text-sm font-medium text-[#777]">{cert.org}</p>
@@ -51,7 +51,7 @@ const CertificationSection = ({ data }: { data: FormData }) => {
                     </span>
                     {cert.startDate} - {cert.endDate}
                   </p>
-                  <p className="text-sm text-[#0B5B4D] font-medium">
+                  <p className="text-sm text-[#071526] font-medium">
                     {cert.credUrl}
                   </p>
                   {cert.media && (

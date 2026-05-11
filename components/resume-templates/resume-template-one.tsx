@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 
-const colorPalatte = ["#006666", "#7d47b2", "#2b98de", "#102a73", "#7d7d7d"];
+const colorPalatte = ["#1a2540", "#7d47b2", "#2b98de", "#102a73", "#7d7d7d"];
 
 interface ResumeTemplateOneProps {
   resumeData: {

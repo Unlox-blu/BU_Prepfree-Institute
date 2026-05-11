@@ -55,12 +55,12 @@ export const MouProgressStepper = ({ mou }: { mou: StepperMouData }) => {
                 const isLast = i === steps.length - 1;
 
                 const dotColor = isDone
-                    ? "bg-[#0B5B4D] border-[#0B5B4D]"
+                    ? "bg-[#071526] border-[#071526]"
                     : isActive
-                        ? step.isReject ? "bg-red-500 border-red-500" : "bg-white border-[#0B5B4D]"
+                        ? step.isReject ? "bg-red-500 border-red-500" : "bg-white border-[#071526]"
                         : "bg-white border-gray-300";
 
-                const lineColor = isDone ? "bg-[#0B5B4D]" : "bg-gray-200";
+                const lineColor = isDone ? "bg-[#071526]" : "bg-gray-200";
 
                 return (
                     <div key={i} className="flex gap-3">
@@ -72,7 +72,7 @@ export const MouProgressStepper = ({ mou }: { mou: StepperMouData }) => {
                                     </svg>
                                 )}
                                 {isActive && !step.isReject && (
-                                    <div className="w-1.5 h-1.5 rounded-full bg-[#0B5B4D]" />
+                                    <div className="w-1.5 h-1.5 rounded-full bg-[#071526]" />
                                 )}
                                 {isActive && step.isReject && (
                                     <svg viewBox="0 0 10 10" className="w-full h-full p-0.5">
@@ -84,7 +84,7 @@ export const MouProgressStepper = ({ mou }: { mou: StepperMouData }) => {
                             {!isLast && <div className={`w-0.5 flex-1 min-h-[26px] my-0.5 rounded transition-all duration-300 ${lineColor}`} />}
                         </div>
                         <div className="pb-4">
-                            <p className={`text-[12px] font-semibold leading-tight ${isActive ? step.isReject ? "text-red-600" : "text-[#0B5B4D]" : isDone ? "text-gray-800" : "text-gray-400"}`}>
+                            <p className={`text-[12px] font-semibold leading-tight ${isActive ? step.isReject ? "text-red-600" : "text-[#071526]" : isDone ? "text-gray-800" : "text-gray-400"}`}>
                                 {step.label}
                             </p>
                             <p className="text-[11px] text-gray-400 mt-0.5">{step.desc}</p>

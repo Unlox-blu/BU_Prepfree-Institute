@@ -40,7 +40,7 @@ export function QuestionCard({
       onClick={onClick}
       className={cn(
         "bg-white border border-gray-200 rounded-xl p-5 shadow-sm flex flex-col gap-3 transition-all duration-200",
-        onClick ? "cursor-pointer hover:border-[#0B5B4D] hover:shadow-md group" : ""
+        onClick ? "cursor-pointer hover:border-[#071526] hover:shadow-md group" : ""
       )}
     >
       <div className="flex justify-between items-start gap-4">
@@ -57,7 +57,7 @@ export function QuestionCard({
              />
           )}
           
-          <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 text-gray-700 font-semibold shrink-0 group-hover:bg-[#EAF6EE] group-hover:text-[#0B5B4D] transition-colors">
+          <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 text-gray-700 font-semibold shrink-0 group-hover:bg-[#EEF1F8] group-hover:text-[#071526] transition-colors">
             {index + 1}
           </div>
           
@@ -99,7 +99,7 @@ export function QuestionCard({
             <Button
               variant="ghost"
               size="icon"
-              className="h-8 w-8 text-gray-400 hover:text-[#0B5B4D] hover:bg-[#EAF6EE]"
+              className="h-8 w-8 text-gray-400 hover:text-[#071526] hover:bg-[#EEF1F8]"
               onClick={onBookmark}
               title="Save to Library"
             >

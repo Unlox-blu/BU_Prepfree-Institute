@@ -57,7 +57,7 @@ export const AlertModal: React.FC<AlertModalProps> = ({
             className={
               variant === "danger"
                 ? "bg-red-600 hover:bg-red-700 text-white"
-                : "bg-[#0B5B4D] hover:bg-[#094d41] text-white"
+                : "bg-[#071526] hover:bg-[#094d41] text-white"
             }
           >
             {loading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : null}

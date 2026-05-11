@@ -247,7 +247,7 @@ export default function SettingsTab({ assessmentId, initialData, apiBaseUrl, onU
                             checked={formData.publishNow} 
                             onChange={(e) => handlePublishNowChange(e.target.checked)} 
                             id="pubNow" 
-                            className="h-4 w-4 rounded border-gray-300 text-[#0B5B4D] focus:ring-[#0B5B4D]"
+                            className="h-4 w-4 rounded border-gray-300 text-[#071526] focus:ring-[#071526]"
                         />
                         <label htmlFor="pubNow" className="text-sm select-none cursor-pointer">Publish Now</label>
                       </div>
@@ -269,7 +269,7 @@ export default function SettingsTab({ assessmentId, initialData, apiBaseUrl, onU
                         checked={formData.expiresNever} 
                         onChange={(e) => handleExpiresNeverChange(e.target.checked)} 
                         id="expNever" 
-                        className="h-4 w-4 rounded border-gray-300 text-[#0B5B4D] focus:ring-[#0B5B4D]"
+                        className="h-4 w-4 rounded border-gray-300 text-[#071526] focus:ring-[#071526]"
                     />
                     <label htmlFor="expNever" className="text-sm select-none cursor-pointer">Never Expire</label>
                   </div>
@@ -303,11 +303,11 @@ export default function SettingsTab({ assessmentId, initialData, apiBaseUrl, onU
                         onClick={() => handleChange("accessType", "public")}
                         className={`flex-1 flex items-start gap-3 p-4 rounded-lg border cursor-pointer transition-all ${
                             formData.accessType === 'public' 
-                            ? 'bg-[#EAF6EE] border-[#0B5B4D] ring-1 ring-[#0B5B4D]' 
+                            ? 'bg-[#EEF1F8] border-[#071526] ring-1 ring-[#071526]' 
                             : 'bg-white border-gray-200 hover:border-gray-300'
                         }`}
                     >
-                        <div className={`mt-1 p-1 rounded-full ${formData.accessType === 'public' ? 'bg-[#0B5B4D] text-white' : 'bg-gray-100 text-gray-400'}`}>
+                        <div className={`mt-1 p-1 rounded-full ${formData.accessType === 'public' ? 'bg-[#071526] text-white' : 'bg-gray-100 text-gray-400'}`}>
                             <Globe size={16} />
                         </div>
                         <div>
@@ -321,11 +321,11 @@ export default function SettingsTab({ assessmentId, initialData, apiBaseUrl, onU
                         onClick={() => handleChange("accessType", "private")}
                         className={`flex-1 flex items-start gap-3 p-4 rounded-lg border cursor-pointer transition-all ${
                             formData.accessType === 'private' 
-                            ? 'bg-[#EAF6EE] border-[#0B5B4D] ring-1 ring-[#0B5B4D]' 
+                            ? 'bg-[#EEF1F8] border-[#071526] ring-1 ring-[#071526]' 
                             : 'bg-white border-gray-200 hover:border-gray-300'
                         }`}
                     >
-                        <div className={`mt-1 p-1 rounded-full ${formData.accessType === 'private' ? 'bg-[#0B5B4D] text-white' : 'bg-gray-100 text-gray-400'}`}>
+                        <div className={`mt-1 p-1 rounded-full ${formData.accessType === 'private' ? 'bg-[#071526] text-white' : 'bg-gray-100 text-gray-400'}`}>
                             <Lock size={16} />
                         </div>
                         <div>
@@ -379,7 +379,7 @@ export default function SettingsTab({ assessmentId, initialData, apiBaseUrl, onU
                         id="live-toggle"
                         checked={formData.isLive}
                         onCheckedChange={(checked) => handleChange("isLive", checked)}
-                        className="data-[state=checked]:bg-[#0B5B4D]"
+                        className="data-[state=checked]:bg-[#071526]"
                     />
                 </div>
 
@@ -396,7 +396,7 @@ export default function SettingsTab({ assessmentId, initialData, apiBaseUrl, onU
                         checked={formData.trending} 
                         disabled={!formData.isLive} // Disabled if Live is off
                         onChange={(e) => handleChange("trending", e.target.checked)} 
-                        className="h-4 w-4 cursor-pointer rounded border-gray-300 text-[#0B5B4D] focus:ring-[#0B5B4D] disabled:opacity-50" 
+                        className="h-4 w-4 cursor-pointer rounded border-gray-300 text-[#071526] focus:ring-[#071526] disabled:opacity-50" 
                     />
                 </div>
 
@@ -406,7 +406,7 @@ export default function SettingsTab({ assessmentId, initialData, apiBaseUrl, onU
                         <button 
                             onClick={() => handleSave()} 
                             disabled={savingSettings} 
-                            className="px-6 py-2 bg-[#0B5B4D] text-white rounded-md text-sm font-medium hover:bg-[#094d41]"
+                            className="px-6 py-2 bg-[#071526] text-white rounded-md text-sm font-medium hover:bg-[#094d41]"
                         >
                             {savingSettings ? "Saving..." : "Save Settings"}
                         </button>
@@ -415,7 +415,7 @@ export default function SettingsTab({ assessmentId, initialData, apiBaseUrl, onU
                             <button onClick={() => handleSave({ publish: false })} disabled={savingSettings} className="px-4 py-2 border rounded-md text-sm font-medium hover:bg-gray-50 bg-white">
                                 {savingSettings ? "Saving..." : "Save Draft"}
                             </button>
-                            <button onClick={() => handleSave({ publish: true })} disabled={savingSettings} className="px-4 py-2 bg-[#0B5B4D] text-white rounded-md text-sm font-medium hover:bg-[#094d41]">
+                            <button onClick={() => handleSave({ publish: true })} disabled={savingSettings} className="px-4 py-2 bg-[#071526] text-white rounded-md text-sm font-medium hover:bg-[#094d41]">
                                 {savingSettings ? "Publishing..." : "Publish"}
                             </button>
                         </>

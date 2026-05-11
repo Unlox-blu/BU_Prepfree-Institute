@@ -114,15 +114,15 @@ export default function RootLayout({
         <AppSidebar />
 
         {/* Main Content */}
-        <SidebarInset className="flex flex-col gap-0 flex-1 bg-[#00323C]">
+        <SidebarInset className="flex flex-col gap-0 flex-1 bg-[#071526]">
           {/* Fixed Header */}
           <header className="w-full h-auto flex flex-col items-start gap-2 px-4 py-2 bg-[#F1F1F1] rounded-tl-[15px] z-10">
             <div className="w-full flex items-center justify-between">
               <div className="flex gap-2 w-1/2">
-                <SidebarTrigger className="-ml-1 bg-[#00323C] text-[#f2f2f2] py-5 px-6 hover:bg-[#00323C] hover:text-[#f2f2f2] hover:opacity-100 hover:shadow-none cursor-pointer" />
+                <SidebarTrigger className="-ml-1 bg-[#314370] text-[#f2f2f2] py-5 px-6 hover:bg-[#071526] hover:text-[#f2f2f2] hover:opacity-100 hover:shadow-none cursor-pointer" />
               </div>
               <div className="flex gap-2">
-                <div className="bg-[#00323C] text-[#f2f2f2] px-4 py-3 cursor-pointer rounded-md">
+                <div className="bg-[#314370] text-[#f2f2f2] px-4 py-3 cursor-pointer rounded-md">
                   <Bell size={18} />
                 </div>
               </div>

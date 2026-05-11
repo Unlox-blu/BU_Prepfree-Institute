@@ -65,7 +65,7 @@ export function NavProjects({
 
   return (
     <SidebarGroup className={`gap-1 ${open ? "p-0 pr-2" : ""}`}>
-      <SidebarGroupLabel className="text-[#ABC8C8]">UPDATES</SidebarGroupLabel>
+      <SidebarGroupLabel className="text-[#9FB3C8]">UPDATES</SidebarGroupLabel>
       <SidebarMenu className="gap-3">
         {projects.map((project) => {
           const hasSubItems =
@@ -88,7 +88,7 @@ export function NavProjects({
                         damping: 30,
                       }}
                     >
-                      <div className="w-full h-full bg-[#00323C] rounded-[10px]" />
+                      <div className="w-full h-full bg-[#9E2339] rounded-[10px]" />
                     </motion.div>
                   )}
 
@@ -105,7 +105,7 @@ export function NavProjects({
                       onClick={() => handleProjectClick(project)}
                       className={`w-full transition-all duration-200 rounded-[10px] ${
                         isSelected
-                          ? "bg-[#00A3A3]/20 shadow-[inset_0px_0px_15px_4px_rgba(0,_0,_0,_0.2)] py-5 px-4"
+                          ? "bg-[#9E2339]/25 shadow-[inset_0px_0px_15px_4px_rgba(0,_0,_0,_0.2)] py-5 px-4"
                           : ""
                       }`}
                     >
@@ -132,7 +132,7 @@ export function NavProjects({
                 </div>
 
                 {hasSubItems && clickedProject === project.name && (
-                  <SidebarMenuSub className="mt-0 p-0 relative gap-3 border-l border-[#006666] pl-3">
+                  <SidebarMenuSub className="mt-0 p-0 relative gap-3 border-l border-[#FFF4CB]/30 pl-3">
                     {project.items?.map((sub) => {
                       const isSubSelected = normalize(sub.url) === deepestMatch;
                       return (
@@ -142,8 +142,8 @@ export function NavProjects({
                               href={sub.url}
                               className={`text-white transition-all ${
                                 isSubSelected
-                                  ? "text-[#00cccc] font-medium"
-                                  : "hover:text-[#00cccc]"
+                                  ? "text-[#FFF4CB] font-medium"
+                                  : "hover:text-[#FFF4CB]/70"
                               }`}
                             >
                               {sub.name}
@@ -152,7 +152,7 @@ export function NavProjects({
                         </SidebarMenuSubItem>
                       );
                     })}
-                    <div className="w-1 h-1 rounded-full bg-[#006666] absolute bottom-0 left-[-2px]" />
+                    <div className="w-1 h-1 rounded-full bg-[#9E2339] absolute bottom-0 left-[-2px]" />
                   </SidebarMenuSub>
                 )}
               </div>

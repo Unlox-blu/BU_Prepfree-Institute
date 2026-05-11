@@ -130,7 +130,7 @@ export default function EditSubscriberModal({ data, onClose, onSuccess }: any) {
         <button
           onClick={handleUpdate}
           disabled={loading}
-          className="mt-5 w-full bg-[#0B5B4D] text-white py-2 rounded flex items-center justify-center gap-2"
+          className="mt-5 w-full bg-[#071526] text-white py-2 rounded flex items-center justify-center gap-2"
         >
           {loading && <Loader2 className="w-4 h-4 animate-spin" />}
           Update

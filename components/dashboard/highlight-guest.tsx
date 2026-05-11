@@ -71,7 +71,7 @@ const HighlightGuests = () => {
 
       {guests.map((guest, index) => (
         <div key={guest.id} className="w-full">
-          <h2 className="font-semibold text-[#0B5B4D] mb-3">Guest {index + 1}</h2>
+          <h2 className="font-semibold text-[#071526] mb-3">Guest {index + 1}</h2>
 
           <div className="w-full flex items-center gap-2 mt-4">
             <label htmlFor={`profile-${guest.id}`} className="relative cursor-pointer">
@@ -92,7 +92,7 @@ const HighlightGuests = () => {
               </div>
 
               {/* Camera Badge */}
-              <div className="absolute bottom-0 right-0 w-7 h-7 p-1 bg-white text-[#0B5B4D] rounded-full flex items-center justify-center border border-gray-200">
+              <div className="absolute bottom-0 right-0 w-7 h-7 p-1 bg-white text-[#071526] rounded-full flex items-center justify-center border border-gray-200">
                 <Camera className="w-4 h-4" />
               </div>
 
@@ -105,7 +105,7 @@ const HighlightGuests = () => {
                 onChange={(e) => handleImageUpload(e, guest.id)}
               />
             </label>
-            <h1 className="text-[#0B5B4D] font-medium text-sm">
+            <h1 className="text-[#071526] font-medium text-sm">
               Upload Profile Photo
             </h1>
           </div>
@@ -170,7 +170,7 @@ const HighlightGuests = () => {
       ))}
 
       <div
-        className="flex text-[#0B5B4D] cursor-pointer hover:underline w-fit mt-1"
+        className="flex text-[#071526] cursor-pointer hover:underline w-fit mt-1"
         onClick={handleAddGuest}
       >
         Add More +

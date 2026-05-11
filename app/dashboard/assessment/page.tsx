@@ -193,7 +193,7 @@ const Page = () => {
       
       <section className="flex items-center justify-between mb-6">
         
-        <h1 className="text-xl font-bold text-[#1E1E1E]">
+        <h1 className="text-xl font-bold text-[#0a0a14]">
           Total {assessments.length} {assessments.length === 1 ? "Assessment" : "Assessments"}
         </h1>
 
@@ -204,7 +204,7 @@ const Page = () => {
 
             <button
               onClick={() => setShowSortMenu(!showSortMenu)}
-              className="flex items-center gap-2 text-sm font-medium text-[#1E1E1E] px-3 py-2 rounded-md border border-gray-200 hover:bg-gray-50"
+              className="flex items-center gap-2 text-sm font-medium text-[#0a0a14] px-3 py-2 rounded-md border border-gray-200 hover:bg-gray-50"
             >
               Sort <ArrowUpDown size={16} />
             </button>
@@ -221,7 +221,7 @@ const Page = () => {
                       setShowSortMenu(false);
                     }}
                     className={`px-4 py-2 text-left hover:bg-gray-50 flex items-center justify-between ${
-                        isSortActive("default") ? "text-[#0B5B4D] font-medium bg-green-50/50" : "text-gray-700"
+                        isSortActive("default") ? "text-[#071526] font-medium bg-green-50/50" : "text-gray-700"
                     }`}
                   >
                     <span>Default</span>
@@ -237,7 +237,7 @@ const Page = () => {
                       setShowSortMenu(false);
                     }}
                     className={`px-4 py-2 text-left hover:bg-gray-50 flex items-center justify-between ${
-                        isSortActive("name", "asc") ? "text-[#0B5B4D] font-medium bg-green-50/50" : "text-gray-700"
+                        isSortActive("name", "asc") ? "text-[#071526] font-medium bg-green-50/50" : "text-gray-700"
                     }`}
                   >
                     <span>Name (A–Z)</span>
@@ -251,7 +251,7 @@ const Page = () => {
                       setShowSortMenu(false);
                     }}
                     className={`px-4 py-2 text-left hover:bg-gray-50 flex items-center justify-between ${
-                        isSortActive("name", "desc") ? "text-[#0B5B4D] font-medium bg-green-50/50" : "text-gray-700"
+                        isSortActive("name", "desc") ? "text-[#071526] font-medium bg-green-50/50" : "text-gray-700"
                     }`}
                   >
                     <span>Name (Z–A)</span>
@@ -267,7 +267,7 @@ const Page = () => {
                       setShowSortMenu(false);
                     }}
                     className={`px-4 py-2 text-left hover:bg-gray-50 flex items-center justify-between ${
-                        isSortActive("publishDate", "desc") ? "text-[#0B5B4D] font-medium bg-green-50/50" : "text-gray-700"
+                        isSortActive("publishDate", "desc") ? "text-[#071526] font-medium bg-green-50/50" : "text-gray-700"
                     }`}
                   >
                     <span>Newest First</span>
@@ -281,7 +281,7 @@ const Page = () => {
                       setShowSortMenu(false);
                     }}
                     className={`px-4 py-2 text-left hover:bg-gray-50 flex items-center justify-between ${
-                        isSortActive("publishDate", "asc") ? "text-[#0B5B4D] font-medium bg-green-50/50" : "text-gray-700"
+                        isSortActive("publishDate", "asc") ? "text-[#071526] font-medium bg-green-50/50" : "text-gray-700"
                     }`}
                   >
                     <span>Oldest First</span>
@@ -295,7 +295,7 @@ const Page = () => {
           {/* Create Assessment */}
           <button
             onClick={() => setShowCreateModal(true)}
-            className="bg-[#0B5B4D] hover:bg-[#094d41] text-white text-sm font-medium px-6 py-2.5 rounded-md"
+            className="bg-[#071526] hover:bg-[#094d41] text-white text-sm font-medium px-6 py-2.5 rounded-md"
           >
             Create Assessment
           </button>
@@ -308,7 +308,7 @@ const Page = () => {
           onClick={() => setActiveTab("main")}
           className={`pb-2 text-sm font-medium border-b-2 ${
             activeTab === "main"
-              ? "border-[#0B5B4D] text-[#0B5B4D]"
+              ? "border-[#071526] text-[#071526]"
               : "border-transparent text-gray-500"
           }`}
         >
@@ -319,7 +319,7 @@ const Page = () => {
           onClick={() => setActiveTab("drafts")}
           className={`pb-2 text-sm font-medium border-b-2 ${
             activeTab === "drafts"
-              ? "border-[#0B5B4D] text-[#0B5B4D]"
+              ? "border-[#071526] text-[#071526]"
               : "border-transparent text-gray-500"
           }`}
         >
@@ -330,14 +330,14 @@ const Page = () => {
       {/* TABLE */}
       {loading ? (
         <div className="flex flex-1 justify-center items-center">
-          <Loader2 size={32} className="animate-spin text-[#0B5B4D]" />
+          <Loader2 size={32} className="animate-spin text-[#071526]" />
         </div>
       ) : (
         <div className="flex-1 relative">
           <div className="absolute inset-0 overflow-y-auto pr-2">
 
             {/* Header */}
-            <div className="w-full border border-[#27CC53] bg-[#EAF6EE] rounded-lg">
+            <div className="w-full border border-[#9FB3C8] bg-[#EEF1F8] rounded-lg">
               <div className={`grid ${activeTab === "main" ? "grid-cols-8" : "grid-cols-7"} py-5 text-sm font-semibold`}>
                 <div className="text-center">Name</div>
                 <div className="text-center">Assignees</div>
@@ -359,7 +359,7 @@ const Page = () => {
                 >
                   {/* Trending Badge - Only show in Default sort or if actively trending */}
                   {item.isTrending && (
-                    <div className="absolute top-0 left-0 bg-[#EAF6EE] text-[#0B5B4D] px-2 py-1 rounded-br-lg flex items-center gap-1 shadow-sm border-r border-b border-[#0B5B4D]/10">
+                    <div className="absolute top-0 left-0 bg-[#EEF1F8] text-[#071526] px-2 py-1 rounded-br-lg flex items-center gap-1 shadow-sm border-r border-b border-[#071526]/10">
                         <TrendingUp size={12} className="stroke-[3]" />
                         <span className="text-[10px] font-bold uppercase tracking-wider">Trending</span>
                     </div>
@@ -387,7 +387,7 @@ const Page = () => {
                         <Switch 
                             checked={item.isLive}
                             onCheckedChange={() => toggleLiveStatus(item.id, item.isLive)}
-                            className="data-[state=checked]:bg-[#0B5B4D] scale-90"
+                            className="data-[state=checked]:bg-[#071526] scale-90"
                         />
                       </div>
                   )}
@@ -396,14 +396,14 @@ const Page = () => {
                     {activeTab === "drafts" ? (
                       <Link
                         href={`/dashboard/assessment/${item.id}/qna`}
-                        className="text-[#0B5B4D] underline font-semibold"
+                        className="text-[#071526] underline font-semibold"
                       >
                         Edit
                       </Link>
                     ) : (
                       <Link
                         href={`/dashboard/assessment/${item.id}`}
-                        className="text-[#064F43] hover:text-[#0B5B4D] transition-colors"
+                        className="text-[#314370] hover:text-[#071526] transition-colors"
                         title="View Report"
                       >
                         <Eye size={20} />
@@ -433,7 +433,7 @@ const Page = () => {
           <button
             disabled={currentPage >= totalPages}
             onClick={() => setCurrentPage(p => p + 1)}
-            className="px-6 py-2 bg-[#0B5B4D] text-white rounded-md disabled:opacity-50"
+            className="px-6 py-2 bg-[#071526] text-white rounded-md disabled:opacity-50"
           >
             Next
           </button>

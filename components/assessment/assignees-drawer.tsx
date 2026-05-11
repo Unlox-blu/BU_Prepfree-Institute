@@ -250,7 +250,7 @@ export function AssigneesDrawer({
           <SheetTitle className="text-lg font-semibold flex items-center gap-2">
             Assign Candidates
             {selection.size > 0 && (
-              <span className="bg-[#0B5B4D] text-white text-xs px-2 py-0.5 rounded-full font-normal">
+              <span className="bg-[#071526] text-white text-xs px-2 py-0.5 rounded-full font-normal">
                 {selection.size} Selected
               </span>
             )}
@@ -289,13 +289,13 @@ export function AssigneesDrawer({
             {totalCount > 0 && (
                 <div className="flex items-center gap-2">
                 {selectingAll ? (
-                    <Loader2 className="w-4 h-4 animate-spin text-[#0B5B4D]" />
+                    <Loader2 className="w-4 h-4 animate-spin text-[#071526]" />
                 ) : (
                     <Checkbox
                     id="selectAll"
                     checked={selection.size === totalCount && totalCount > 0}
                     onCheckedChange={(v) => handleSelectAll(!!v)}
-                    className="data-[state=checked]:bg-[#0B5B4D]"
+                    className="data-[state=checked]:bg-[#071526]"
                     />
                 )}
                 <label
@@ -321,7 +321,7 @@ export function AssigneesDrawer({
         <div className="flex-1 overflow-hidden relative bg-white">
           {loading ? (
             <div className="flex flex-col items-center justify-center h-full text-gray-400 gap-2">
-              <Loader2 className="w-8 h-8 animate-spin text-[#0B5B4D]" />
+              <Loader2 className="w-8 h-8 animate-spin text-[#071526]" />
               <p className="text-sm">Loading...</p>
             </div>
           ) : users.length === 0 ? (
@@ -343,7 +343,7 @@ export function AssigneesDrawer({
                       onClick={() => toggleUser(user._id)}
                       className={`flex items-center gap-3 p-3 rounded-lg cursor-pointer border ${
                         isSelected
-                          ? "bg-[#E0FFE8] border-[#0B5B4D]/30"
+                          ? "bg-[#EEF1F8] border-[#071526]/30"
                           : "bg-white border-transparent hover:bg-gray-50"
                       }`}
                     >
@@ -351,13 +351,13 @@ export function AssigneesDrawer({
                         checked={isSelected}
                         onCheckedChange={() => toggleUser(user._id)}
                         onClick={(e) => e.stopPropagation()}
-                        className="data-[state=checked]:bg-[#0B5B4D]"
+                        className="data-[state=checked]:bg-[#071526]"
                       />
                       <Avatar className="w-9 h-9 border">
                         <AvatarImage
                           src={user.profileInfo?.profileImageS3Key}
                         />
-                        <AvatarFallback className="text-xs bg-[#EAF6EE] text-[#0B5B4D]">
+                        <AvatarFallback className="text-xs bg-[#EEF1F8] text-[#071526]">
                           {name[0]}
                         </AvatarFallback>
                       </Avatar>
@@ -385,7 +385,7 @@ export function AssigneesDrawer({
                       size="sm"
                       onClick={loadMore}
                       disabled={loadingMore}
-                      className="text-[#0B5B4D] text-xs h-8"
+                      className="text-[#071526] text-xs h-8"
                     >
                       Load More
                     </Button>
@@ -407,7 +407,7 @@ export function AssigneesDrawer({
             <Button
               onClick={handleSave}
               size="sm"
-              className="bg-[#0B5B4D] text-white h-9 px-6"
+              className="bg-[#071526] text-white h-9 px-6"
             >
               Confirm
             </Button>

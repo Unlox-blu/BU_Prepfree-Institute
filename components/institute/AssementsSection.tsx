@@ -98,7 +98,7 @@ const AssementsSection = ({ data = [], totalCount, currentPage: serverPage, onPa
     
                 <Link
                 href={`/dashboard/assessment/${test.id}`}
-                className="w-full flex gap-3 items-center mt-2 h-auto py-2 justify-center rounded-xl border border-[#0B5B4D] cursor-pointer text-[#0B5B4D] font-medium hover:bg-[#0B5B4D] hover:text-white transition-all"
+                className="w-full flex gap-3 items-center mt-2 h-auto py-2 justify-center rounded-xl border border-[#071526] cursor-pointer text-[#071526] font-medium hover:bg-[#071526] hover:text-white transition-all"
                 >
                 View Test
                 <ArrowUpRight size={18} />
@@ -124,7 +124,7 @@ const AssementsSection = ({ data = [], totalCount, currentPage: serverPage, onPa
                 ‹
               </button>
 
-              <div className="w-7 h-7 flex items-center justify-center rounded-md bg-[#0B5B4D] text-white text-xs font-semibold">
+              <div className="w-7 h-7 flex items-center justify-center rounded-md bg-[#071526] text-white text-xs font-semibold">
                 {currentPage}
               </div>
 
@@ -153,7 +153,7 @@ function TopicsList({ categories }: { categories: string[] }) {
         (category: string, index: number) => (
           <div
             key={index}
-            className="bg-[#E2FFEA] text-[#00241E]/80 px-2 py-1 rounded-full text-[10px] font-medium flex items-center justify-center whitespace-nowrap"
+            className="bg-[#EEF1F8] text-[#071526]/80 px-2 py-1 rounded-full text-[10px] font-medium flex items-center justify-center whitespace-nowrap"
           >
             {category}
           </div>

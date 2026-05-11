@@ -57,7 +57,7 @@ const ProfilePage = () => {
   return (
     <main className="w-full h-auto flex gap-4">
       <div className="w-[60%] flex flex-col gap-4 mb-10">
-        <h1 className="text-[#1E1E1E] font-bold text-lg">
+        <h1 className="text-[#0a0a14] font-bold text-lg">
           {user.firstname} {user.lastname}'s Profile
         </h1>
         {/* Banner + Profile Card */}
@@ -93,13 +93,13 @@ const ProfilePage = () => {
               </div>
 
               <div className="flex items-center justify-between w-[95%] mt-3">
-                <h1 className="text-lg text-[#18191C] font-bold">
+                <h1 className="text-lg text-[#0a0a14] font-bold">
                   {user.firstname} {user.lastname}
                 </h1>
 
                 <div className="flex gap-1 items-center">
                   <Phone size={15} />
-                  <p className="text-md font-medium text-[#18191C]">
+                  <p className="text-md font-medium text-[#0a0a14]">
                     {user.country_code}
                     {user.phone_number}
                   </p>
@@ -110,7 +110,7 @@ const ProfilePage = () => {
                 {user?.profileInfo?.profileHeadline || "Headline"}
               </p>
 
-              <p className="text-md text-[#0B5B4D] font-medium underline">
+              <p className="text-md text-[#071526] font-medium underline">
                 {user.email}
               </p>
 
@@ -122,7 +122,7 @@ const ProfilePage = () => {
         </div>
         {/* Sections - pass user directly */}
         {/* Cards */}
-        <h1 className="text-[#1E1E1E] font-bold text-lg">Experience</h1>
+        <h1 className="text-[#0a0a14] font-bold text-lg">Experience</h1>
         {user?.experience && user.experience.length > 0 ? (
           <div className="flex flex-col gap-3">
             {user.experience.map((exp: any, idx: number) => (
@@ -154,11 +154,11 @@ const ProfilePage = () => {
 
                   {/* Content */}
                   <div className="flex flex-col gap-1 w-[85%]">
-                    <h2 className="text-md font-semibold text-[#1E1E1E]">
+                    <h2 className="text-md font-semibold text-[#0a0a14]">
                       {exp?.title || "Title not provided"}
                     </h2>
 
-                    <p className="text-sm text-[#0B5B4D] font-semibold">
+                    <p className="text-sm text-[#071526] font-semibold">
                       {exp?.company || "Company"}{" "}
                       <span className="text-xs text-[#616161] ml-2">
                         {exp?.jobType || ""}
@@ -194,7 +194,7 @@ const ProfilePage = () => {
           <h1 className="text-sm text-[#6b6b6b]">No experience added yet</h1>
         )}
 
-        <h1 className="text-[#1E1E1E] font-bold text-lg">Education</h1>
+        <h1 className="text-[#0a0a14] font-bold text-lg">Education</h1>
         {user?.education && user.education.length > 0 ? (
           <div className="flex flex-col gap-3">
             {user.education.map((edu: any, idx: number) => (
@@ -226,7 +226,7 @@ const ProfilePage = () => {
 
                   {/* Education Info */}
                   <div className="flex flex-col gap-1 w-[85%]">
-                    <h2 className="text-md font-semibold text-[#1E1E1E]">
+                    <h2 className="text-md font-semibold text-[#0a0a14]">
                       {edu?.institution || "Institution not provided"}
                     </h2>
 
@@ -274,7 +274,7 @@ const ProfilePage = () => {
           <p className="text-sm text-gray-500">No education added yet</p>
         )}
 
-        <h1 className="text-[#1E1E1E] font-bold text-lg">Projects</h1>
+        <h1 className="text-[#0a0a14] font-bold text-lg">Projects</h1>
         {user?.projects && user.projects.length > 0 ? (
           <div className="flex flex-col gap-3">
             {user.projects.map((proj: any, idx: number) => (
@@ -306,7 +306,7 @@ const ProfilePage = () => {
 
                   {/* Project Info */}
                   <div className="flex flex-col gap-1 w-[80%]">
-                    <h2 className="text-md font-semibold text-[#1E1E1E]">
+                    <h2 className="text-md font-semibold text-[#0a0a14]">
                       {proj?.title || "Untitled Project"}
                     </h2>
 
@@ -342,7 +342,7 @@ const ProfilePage = () => {
                             href={proj.liveUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-xs text-[#0B5B4D] underline font-semibold"
+                            className="text-xs text-[#071526] underline font-semibold"
                           >
                             Live Demo
                           </a>
@@ -352,7 +352,7 @@ const ProfilePage = () => {
                             href={proj.githubUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-xs text-[#0B5B4D] underline font-semibold"
+                            className="text-xs text-[#071526] underline font-semibold"
                           >
                             GitHub
                           </a>
@@ -368,7 +368,7 @@ const ProfilePage = () => {
           <p className="text-sm text-gray-500">No projects added yet</p>
         )}
 
-        <h1 className="text-[#1E1E1E] font-bold text-lg">Job Preferences</h1>
+        <h1 className="text-[#0a0a14] font-bold text-lg">Job Preferences</h1>
         <div className="w-full h-auto rounded-lg overflow-hidden bg-white p-5 flex flex-col gap-2">
           <Row
             label="Job Roles"
@@ -404,7 +404,7 @@ const ProfilePage = () => {
           />
         </div>
 
-        <h1 className="text-[#1E1E1E] font-bold text-lg">Certification</h1>
+        <h1 className="text-[#0a0a14] font-bold text-lg">Certification</h1>
         {user?.certifications?.length > 0 ? (
           <div className="flex flex-col gap-3">
             {user?.certifications?.map((cert: any, idx: any) => (
@@ -422,7 +422,7 @@ const ProfilePage = () => {
                   </div>
 
                   <div className="flex flex-col gap-1.5">
-                    <h2 className="text-sm font-semibold text-[#1E1E1E]">
+                    <h2 className="text-sm font-semibold text-[#0a0a14]">
                       {cert.title}
                     </h2>
 
@@ -444,7 +444,7 @@ const ProfilePage = () => {
                         href={cert.credentialUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm font-medium text-[#0B5B4D] hover:underline max-w-[220px] truncate"
+                        className="text-sm font-medium text-[#071526] hover:underline max-w-[220px] truncate"
                         title={cert.credentialUrl}
                       >
                         {cert.credentialUrl}
@@ -476,13 +476,13 @@ const ProfilePage = () => {
           <p className="text-sm text-gray-500">No Certification added yet</p>
         )}
 
-        <h1 className="text-[#1E1E1E] font-bold text-lg">Skills</h1>
+        <h1 className="text-[#0a0a14] font-bold text-lg">Skills</h1>
         {user?.skills?.length > 0 ? (
           <div className="flex flex-wrap gap-3 bg-white p-5 rounded-xl">
             {user?.skills?.map((skill: any, idx: number) => (
               <div
                 key={idx}
-                className="bg-[#E7FEEE] text-black font-medium text-sm px-4 py-2 rounded-full"
+                className="bg-[#EEF1F8] text-black font-medium text-sm px-4 py-2 rounded-full"
               >
                 {skill.name}
               </div>

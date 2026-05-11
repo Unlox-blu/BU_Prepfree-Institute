@@ -42,8 +42,8 @@ const Page = () => {
 
         if (jobsData.success) {
           const mappedJobs: Job[] = jobsData.jobs.map((job: any) => ({
-            id: job._id || job.id,
-            uuid: job._id || job.id,
+            id: job.UUID,
+            uuid: job.UUID,
             comName: job.org?.org_name || "N/A",
             compLogo: job.org?.org_logo || compLogo,
             jobTitle: job.job_title || "Job Role",
@@ -55,9 +55,9 @@ const Page = () => {
             range: job.min_exp || "0 Yrs",
             jobType: job.job_type || "Full-Time",
             isHidden: job.isHiddenForInstitute || false,
-            applicationCount: countMap.get(job._id || job.id) || 0,
+            applicationCount: countMap.get(job.UUID) || 0,
 
-            href: `/dashboard/marketplace-jobs/${job._id || job.id}`,
+            href: `/dashboard/marketplace-jobs/${job.UUID}`,
           }));
           setJobs(mappedJobs);
         }
@@ -126,7 +126,7 @@ const Page = () => {
 
           <button
             onClick={() => setFilterOpen(!filterOpen)}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${filterOpen ? "bg-[#E7FEEE] text-[#0B5B4D]" : "bg-white border border-gray-200 text-gray-600 hover:bg-gray-50"
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${filterOpen ? "bg-[#EEF1F8] text-[#071526]" : "bg-white border border-gray-200 text-gray-600 hover:bg-gray-50"
               }`}
           >
             <ListFilter size={16} />

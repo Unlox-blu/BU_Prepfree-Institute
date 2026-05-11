@@ -28,7 +28,7 @@ const ProjectsSection = ({
     <div className="w-full flex flex-col gap-2">
       {/* Header */}
       <div className="flex justify-between items-center">
-        <h1 className="text-[#1E1E1E] font-bold text-lg">Projects</h1>
+        <h1 className="text-[#0a0a14] font-bold text-lg">Projects</h1>
       </div>
 
       {/* Cards */}
@@ -44,7 +44,7 @@ const ProjectsSection = ({
                   <Image src={projIcon} alt="experience" />
                 </div>
                 <div className="flex flex-col gap-1 w-[75%]">
-                  <h2 className="text-md font-semibold text-[#1E1E1E]">
+                  <h2 className="text-md font-semibold text-[#0a0a14]">
                     {proj.name}
                   </h2>
                   <p className="text-sm text-black/50 font-medium">{proj.desc}</p>

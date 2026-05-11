@@ -55,8 +55,8 @@ const OnboardingScreen = ({ data = [], totalCount, currentPage: serverPage, onPa
     <div className="w-full relative overflow-hidden bg-gray-50/50 p-4 rounded-b-xl border border-t-0 border-gray-100">
       <div className="overflow-y-auto pr-2 space-y-3">
         {/* Header */}
-        <div className="border border-[#69BE81] bg-[#EAF6EE] rounded-lg">
-          <div className="grid grid-cols-7 py-3 text-xs font-semibold text-[#1E1E1E]">
+        <div className="border border-[#9FB3C8] bg-[#EEF1F8] rounded-lg">
+          <div className="grid grid-cols-7 py-3 text-xs font-semibold text-[#0a0a14]">
             <div className="pl-6 text-center">No</div>
             <div className="text-center">Student Name</div>
             <div className="text-center break-words">Email</div>
@@ -99,7 +99,7 @@ const OnboardingScreen = ({ data = [], totalCount, currentPage: serverPage, onPa
                 <div className="flex justify-center">
                   <Link
                     href={`/dashboard/database/profile?id=${c.id}`}
-                    className="underline text-[#217A54] font-medium cursor-pointer hover:text-[#145a3d]"
+                    className="underline text-[#314370] font-medium cursor-pointer hover:text-[#145a3d]"
                   >
                     View More
                   </Link>
@@ -129,7 +129,7 @@ const OnboardingScreen = ({ data = [], totalCount, currentPage: serverPage, onPa
               </button>
 
               {/* Current Page */}
-              <div className="w-7 h-7 flex items-center justify-center rounded-md bg-[#0B5B4D] text-white text-xs font-semibold">
+              <div className="w-7 h-7 flex items-center justify-center rounded-md bg-[#071526] text-white text-xs font-semibold">
                 {currentPage}
               </div>
 
@@ -171,7 +171,7 @@ const ProfileCompletion = ({ value }: any) => {
         cx="20"
         cy="20"
         r={radius}
-        stroke="#27CC53"
+        stroke="#9FB3C8"
         strokeWidth="4"
         fill="none"
         strokeDasharray={circumference}

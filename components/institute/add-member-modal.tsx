@@ -197,7 +197,7 @@ export default function AddMemberModal({
           <button
             onClick={handleSubmit}
             disabled={loading}
-            className="bg-[#0B5B4D] text-white rounded-md py-2 mt-2"
+            className="bg-[#071526] text-white rounded-md py-2 mt-2"
           >
             {loading ? <Loader2 className="animate-spin mx-auto" /> : "Create Member"}
           </button>

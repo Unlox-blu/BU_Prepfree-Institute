@@ -320,7 +320,7 @@ export default function LibraryAddSidebar({
         {/* Header */}
         <div className="p-6 border-b flex justify-between items-center bg-gray-50/50">
           <div>
-            <h2 className="text-xl font-semibold text-[#0B5B4D]">Add Questions</h2>
+            <h2 className="text-xl font-semibold text-[#071526]">Add Questions</h2>
             <p className="text-sm text-gray-500">Add manually or generate via AI</p>
           </div>
           <Button variant="ghost" size="icon" onClick={onClose}><X size={20} /></Button>
@@ -331,14 +331,14 @@ export default function LibraryAddSidebar({
           <div className="flex bg-gray-100 p-1 rounded-lg">
             <button
               onClick={() => setMode("manual")}
-              className={`flex-1 py-2 text-sm font-medium rounded-md transition-all ${mode === "manual" ? "bg-white text-[#0B5B4D] shadow-sm" : "text-gray-500 hover:text-gray-700"
+              className={`flex-1 py-2 text-sm font-medium rounded-md transition-all ${mode === "manual" ? "bg-white text-[#071526] shadow-sm" : "text-gray-500 hover:text-gray-700"
                 }`}
             >
               Manual Entry
             </button>
             <button
               onClick={() => setMode("ai")}
-              className={`flex-1 py-2 text-sm font-medium rounded-md transition-all ${mode === "ai" ? "bg-white text-[#0B5B4D] shadow-sm" : "text-gray-500 hover:text-gray-700"
+              className={`flex-1 py-2 text-sm font-medium rounded-md transition-all ${mode === "ai" ? "bg-white text-[#071526] shadow-sm" : "text-gray-500 hover:text-gray-700"
                 }`}
             >
               Generate with AI
@@ -403,25 +403,25 @@ export default function LibraryAddSidebar({
               </div>
 
               <div>
-                <label className="text-base font-medium mb-2 block text-[#1E1E1E]">Question:</label>
+                <label className="text-base font-medium mb-2 block text-[#0a0a14]">Question:</label>
                 <Textarea
                   placeholder="Type your question here..."
                   value={manualQ.question}
                   onChange={(e) => setManualQ((s) => ({ ...s, question: e.target.value }))}
-                  className="min-h-[100px] focus:border-[#0B5B4D] resize-none"
+                  className="min-h-[100px] focus:border-[#071526] resize-none"
                 />
               </div>
 
               <div>
                 <div className="flex justify-between items-center mb-3">
-                  <h3 className="font-medium text-[#1E1E1E]">Options</h3>
+                  <h3 className="font-medium text-[#0a0a14]">Options</h3>
                   <span className="text-xs text-gray-500">Mark the correct answer</span>
                 </div>
                 <div className="flex flex-col gap-3">
                   {manualQ.options?.map((opt, idx) => {
                     const isSelected = manualQ.correctOptionIndex === idx;
                     return (
-                      <div key={idx} className={`flex items-center gap-3 p-3 border rounded-lg transition-all ${isSelected ? "border-[#0B5B4D] bg-[#F0FDF4]" : "border-gray-200 bg-white"}`}>
+                      <div key={idx} className={`flex items-center gap-3 p-3 border rounded-lg transition-all ${isSelected ? "border-[#071526] bg-[#F0FDF4]" : "border-gray-200 bg-white"}`}>
                         <div className="text-gray-300"><MoreHorizontal className="rotate-90" size={16} /></div>
                         <div className="relative flex items-center">
                           <input
@@ -429,7 +429,7 @@ export default function LibraryAddSidebar({
                             name={`manual_opt`}
                             checked={isSelected}
                             onChange={() => setManualQ((s) => ({ ...s, correctOptionIndex: idx }))}
-                            className="peer w-5 h-5 cursor-pointer appearance-none border border-gray-300 rounded-full checked:border-[#0B5B4D] checked:border-4"
+                            className="peer w-5 h-5 cursor-pointer appearance-none border border-gray-300 rounded-full checked:border-[#071526] checked:border-4"
                           />
                         </div>
                         <input
@@ -439,13 +439,13 @@ export default function LibraryAddSidebar({
                           value={opt}
                           onChange={(e) => handleManualOptionChange(idx, e.target.value)}
                         />
-                        {isSelected && <CheckCircle size={18} className="text-[#0B5B4D]" />}
+                        {isSelected && <CheckCircle size={18} className="text-[#071526]" />}
                         <Button variant="ghost" size="icon" onClick={() => removeManualOption(idx)} className="text-gray-400 hover:text-red-500 h-8 w-8"><Trash2 size={16} /></Button>
                       </div>
                     );
                   })}
                 </div>
-                <Button variant="outline" onClick={addManualOption} className="w-full mt-3 border-dashed text-gray-500 hover:text-[#0B5B4D] hover:border-[#0B5B4D]">
+                <Button variant="outline" onClick={addManualOption} className="w-full mt-3 border-dashed text-gray-500 hover:text-[#071526] hover:border-[#071526]">
                   <Plus size={16} className="mr-2" /> Add Option
                 </Button>
               </div>
@@ -484,10 +484,10 @@ export default function LibraryAddSidebar({
                   <label className="text-sm font-medium mb-3 block">Categories</label>
                   <div className="flex gap-6">
                     <label className="flex items-center gap-2 cursor-pointer text-sm">
-                      <input type="checkbox" checked={aiCats.domain} onChange={() => setAiCats(p => ({ ...p, domain: !p.domain }))} className="accent-[#0B5B4D]" /> Domain Based
+                      <input type="checkbox" checked={aiCats.domain} onChange={() => setAiCats(p => ({ ...p, domain: !p.domain }))} className="accent-[#071526]" /> Domain Based
                     </label>
                     <label className="flex items-center gap-2 cursor-pointer text-sm">
-                      <input type="checkbox" checked={aiCats.aptitude} onChange={() => setAiCats(p => ({ ...p, aptitude: !p.aptitude }))} className="accent-[#0B5B4D]" /> Aptitude Based
+                      <input type="checkbox" checked={aiCats.aptitude} onChange={() => setAiCats(p => ({ ...p, aptitude: !p.aptitude }))} className="accent-[#071526]" /> Aptitude Based
                     </label>
                   </div>
                 </div>
@@ -505,14 +505,14 @@ export default function LibraryAddSidebar({
                     <label className="text-xs font-medium text-gray-500 mb-2 block">Sub Topics (Select at least one)</label>
                     <div className="flex flex-wrap gap-2 mb-3">
                       {aiSubDomains.map(tag => (
-                        <span key={tag} className="px-3 py-1 bg-green-50 text-[#0B5B4D] border border-green-200 rounded-full text-xs flex items-center gap-1">
+                        <span key={tag} className="px-3 py-1 bg-green-50 text-[#071526] border border-green-200 rounded-full text-xs flex items-center gap-1">
                           {tag} <X size={12} className="cursor-pointer" onClick={() => removeSubDomain(tag)} />
                         </span>
                       ))}
                     </div>
                     <div className="p-3 bg-gray-50 rounded-lg border flex flex-wrap gap-2 max-h-[120px] overflow-y-auto">
                       {aiDomain ? getSubTopicsForDomain("Domain Based", aiDomain).map((s: string) => (
-                        <button key={s} onClick={() => aiSubDomains.includes(s) ? removeSubDomain(s) : addSubDomain(s)} className={`px-3 py-1 rounded-full text-xs border ${aiSubDomains.includes(s) ? "bg-[#0B5B4D] text-white" : "bg-white text-gray-600"}`}>
+                        <button key={s} onClick={() => aiSubDomains.includes(s) ? removeSubDomain(s) : addSubDomain(s)} className={`px-3 py-1 rounded-full text-xs border ${aiSubDomains.includes(s) ? "bg-[#071526] text-white" : "bg-white text-gray-600"}`}>
                           {aiSubDomains.includes(s) ? s : `+ ${s}`}
                         </button>
                       )) : <span className="text-xs text-gray-400">Select domain to see suggestions</span>}
@@ -524,7 +524,7 @@ export default function LibraryAddSidebar({
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <h3 className="font-semibold">Question Details</h3>
-                  <Button variant="ghost" size="sm" onClick={addRow} className="text-[#0B5B4D] text-xs"><Plus size={14} className="mr-1" /> Add Set</Button>
+                  <Button variant="ghost" size="sm" onClick={addRow} className="text-[#071526] text-xs"><Plus size={14} className="mr-1" /> Add Set</Button>
                 </div>
                 {rows.map(r => (
                   <AssessmentRow
@@ -551,9 +551,9 @@ export default function LibraryAddSidebar({
         <div className="p-4 border-t border-gray-100 bg-white flex justify-end gap-3">
           <Button variant="outline" onClick={onClose}>Cancel</Button>
           {mode === "manual" ? (
-            <Button onClick={submitManual} className="bg-[#0B5B4D] hover:bg-[#094d41]">Save Question</Button>
+            <Button onClick={submitManual} className="bg-[#071526] hover:bg-[#094d41]">Save Question</Button>
           ) : (
-            <Button onClick={submitAi} disabled={isLoading} className="bg-[#0B5B4D] hover:bg-[#094d41]">
+            <Button onClick={submitAi} disabled={isLoading} className="bg-[#071526] hover:bg-[#094d41]">
               {isLoading ? <Loader2 className="animate-spin mr-2" size={16} /> : null}
               Generate Questions
             </Button>

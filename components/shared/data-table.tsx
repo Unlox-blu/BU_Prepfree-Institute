@@ -48,11 +48,11 @@ export function DataTable<TData, TValue>({
     <>
       <div className="w-full rounded-md border border-gray-200 overflow-hidden">
         <UiTable>
-          <TableHeader className="bg-[#EAF6EE]">
+          <TableHeader className="bg-[#EEF1F8]">
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id}>
                 {headerGroup.headers.map((header) => (
-                  <TableHead key={header.id} className="text-[#1E1E1E] font-semibold text-sm">
+                  <TableHead key={header.id} className="text-[#0a0a14] font-semibold text-sm">
                     {header.isPlaceholder
                       ? null
                       : flexRender(header.column.columnDef.header, header.getContext())}
@@ -66,7 +66,7 @@ export function DataTable<TData, TValue>({
               table.getRowModel().rows.map((row) => (
                 <TableRow key={row.id} className="bg-white hover:bg-white border-b border-black/10">
                   {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id} className="text-[#1E1E1E] text-sm">
+                    <TableCell key={cell.id} className="text-[#0a0a14] text-sm">
                       {flexRender(cell.column.columnDef.cell, cell.getContext())}
                     </TableCell>
                   ))}
@@ -91,14 +91,14 @@ export function DataTable<TData, TValue>({
             <button
               onClick={() => table.previousPage()}
               disabled={!table.getCanPreviousPage()}
-              className="border-2 border-[#0B5B4D] text-[#0B5B4D] px-6 py-1 rounded-md disabled:opacity-50 cursor-pointer disabled:cursor-not-allowed"
+              className="border-2 border-[#071526] text-[#071526] px-6 py-1 rounded-md disabled:opacity-50 cursor-pointer disabled:cursor-not-allowed"
             >
               Prev
             </button>
             <button
               onClick={() => table.nextPage()}
               disabled={!table.getCanNextPage()}
-              className="bg-[#0B5B4D] border-2 border-[#0B5B4D] text-white px-6 py-1 ml-2 rounded-md disabled:opacity-50 cursor-pointer disabled:cursor-not-allowed"
+              className="bg-[#071526] border-2 border-[#071526] text-white px-6 py-1 ml-2 rounded-md disabled:opacity-50 cursor-pointer disabled:cursor-not-allowed"
             >
               Next
             </button>

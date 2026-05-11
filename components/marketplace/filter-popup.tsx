@@ -102,7 +102,7 @@ export function FilterPopup({
       <div className="flex-1 overflow-y-auto space-y-4 px-4">
         <button
           onClick={handleClear}
-          className="text-[#0B5B4D] underline text-sm font-medium cursor-pointer mt-4"
+          className="text-[#071526] underline text-sm font-medium cursor-pointer mt-4"
         >
           Clear Filters
         </button>

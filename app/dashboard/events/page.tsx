@@ -93,7 +93,7 @@ const Page = () => {
         <h1 className="text-xl font-semibold">Upcoming Events</h1>
         <button
           onClick={handleCreate}
-          className="px-4 py-2 bg-[#0B5B4D] text-sm rounded-md text-white font-medium"
+          className="px-4 py-2 bg-[#071526] text-sm rounded-md text-white font-medium"
         >
           Create Event
         </button>
@@ -290,10 +290,10 @@ const Page = () => {
               all necessary materials.
             </p>
             <div className="flex gap-2 items-center justify-start w-full mt-1">
-              <button className="border-2 border-[#0B5B4D] p-2 rounded-md text-[#0B5B4D]">
+              <button className="border-2 border-[#071526] p-2 rounded-md text-[#071526]">
                 Upload File
               </button>
-              <button className="border-2 border-[#0B5B4D] bg-[#0B5B4D] px-6 py-2 rounded-md text-white">
+              <button className="border-2 border-[#071526] bg-[#071526] px-6 py-2 rounded-md text-white">
                 Add Link
               </button>
             </div>

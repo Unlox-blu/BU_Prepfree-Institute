@@ -63,7 +63,7 @@ const navData = {
       items: [],
     },
 
-      {
+    {
       title: "Members",
       url: "/dashboard/members",
       icon: Users,
@@ -116,7 +116,7 @@ const navData = {
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const { open } = useSidebar();
-  
+
   // State for dynamic user data
   const [user, setUser] = React.useState({
     name: "Loading...",
@@ -131,7 +131,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         if (!token) return;
 
         const API_BASE = process.env.NEXT_PUBLIC_BACKEND_URL || process.env.NEXT_PUBLIC_API_URL || 'http://localhost:1995';
-        
+
         const response = await axios.get(`${API_BASE}/api/v1/institute/me`, {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -149,9 +149,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       } catch (error) {
         console.error("Failed to fetch sidebar user profile", error);
         setUser({
-             name: "User",
-             email: "Error loading profile",
-             avatar: "/avatars/shadcn.jpg"
+          name: "User",
+          email: "Error loading profile",
+          avatar: "/avatars/shadcn.jpg"
         });
       }
     };
@@ -161,19 +161,19 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 
   return (
     <Sidebar collapsible="icon" {...props} className="border-none z-0">
-      <SidebarHeader className="bg-[#00323C] text-white pt-4">
+      <SidebarHeader className="bg-[#071526] text-white pt-4">
         {/* <TeamSwitcher teams={data.teams} /> */}
         <Image
           src={logo}
           alt="Logo"
-          className={`${open ? "w-[40%]" : "w-full"} pt-4`}
+          className={`${open ? "w-[20%]" : "w-full"} pt-4`}
         />
       </SidebarHeader>
-      <SidebarContent className="bg-[#00323C] text-white">
+      <SidebarContent className="bg-[#071526] text-white">
         <NavMain items={navData.navMain} />
         {/* <NavProjects projects={data.projects} /> */}
       </SidebarContent>
-      <SidebarFooter className="bg-[#00323C] text-white border-t border-[#00A3A3]/15">
+      <SidebarFooter className="bg-[#071526] text-white border-t border-[#9E2339]/30">
         <NavUser user={user} />
       </SidebarFooter>
       <SidebarRail />

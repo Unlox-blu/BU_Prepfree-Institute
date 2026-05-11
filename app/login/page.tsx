@@ -106,14 +106,14 @@ const LoginPage = () => {
 
   if (!isClient) {
     return (
-      <main className="w-full h-screen bg-[#061413] text-white flex items-center justify-center">
+      <main className="w-full h-screen bg-[#071526] text-white flex items-center justify-center">
         Loading...
       </main>
     );
   }
 
   return (
-    <main className="w-full h-screen flex items-center justify-center p-24 bg-gradient-to-t from-[#061413] to-[#204444] text-white">
+    <main className="w-full h-screen flex items-center justify-center p-24 bg-gradient-to-t from-[#071526] to-[#0d1f3c] text-white">
       
       {!isInstituteSubdomain ? (
         <div className="flex flex-col items-center gap-4 text-center">
@@ -143,7 +143,7 @@ const LoginPage = () => {
                   type="text"
                   name="email"
                   placeholder="name@institute.com"
-                  className="bg-white py-3 px-4 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-[#43B17E]"
+                  className="bg-white py-3 px-4 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-[#9E2339]"
                   value={formData.email}
                   onChange={handleChange}
                 />
@@ -156,7 +156,7 @@ const LoginPage = () => {
                     type={showPassword ? "text" : "password"}
                     name="password"
                     placeholder="Enter Password"
-                    className="bg-white py-3 px-4 rounded-lg text-black w-full pr-10 focus:outline-none focus:ring-2 focus:ring-[#43B17E]"
+                    className="bg-white py-3 px-4 rounded-lg text-black w-full pr-10 focus:outline-none focus:ring-2 focus:ring-[#9E2339]"
                     value={formData.password}
                     onChange={handleChange}
                   />
@@ -173,14 +173,14 @@ const LoginPage = () => {
 
             <p className="text-xs font-light text-center mt-2 text-gray-400">
               By logging in, you agree to our{" "}
-              <a className="text-[#81EFAD] underline cursor-pointer">Terms of Service</a> and{" "}
-              <span className="text-[#81EFAD] cursor-pointer">Privacy Policy</span>.
+              <a className="text-[#9FB3C8] underline cursor-pointer">Terms of Service</a> and{" "}
+              <span className="text-[#9FB3C8] cursor-pointer">Privacy Policy</span>.
             </p>
 
             <button
               onClick={handleLogin}
               disabled={loading}
-              className="w-full bg-[#026451] py-4 flex items-center justify-center rounded-full mt-4 hover:bg-[#028965] transition disabled:opacity-50"
+              className="w-full bg-[#071526] py-4 flex items-center justify-center rounded-full mt-4 hover:bg-[#1a2d4e] transition disabled:opacity-50"
             >
               {loading ? "Logging In..." : "Log In"}
             </button>

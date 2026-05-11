@@ -13,7 +13,7 @@ const SkillsSection = ({ data }: { data: FormData }) => {
     <div className="w-full flex flex-col gap-2">
       {/* Header */}
       <div className="flex justify-between items-center">
-        <h1 className="text-[#1E1E1E] font-bold text-lg">Skills</h1>
+        <h1 className="text-[#0a0a14] font-bold text-lg">Skills</h1>
       </div>
 
       {/* ---- STATE 3: Display ---- */}
@@ -22,7 +22,7 @@ const SkillsSection = ({ data }: { data: FormData }) => {
           {data.skills.map((skill, idx) => (
             <div
               key={idx}
-              className="flex items-center gap-2 bg-[#E7FEEE] text-black font-medium text-sm px-4 py-2 rounded-full"
+              className="flex items-center gap-2 bg-[#EEF1F8] text-black font-medium text-sm px-4 py-2 rounded-full"
             >
               <span>{skill}</span>
             </div>

@@ -74,10 +74,10 @@ export default function MembersPage() {
     <div className="w-full h-full flex flex-col p-6 relative font-sans">
       {/* HEADER */}
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-xl font-bold text-[#1E1E1E]">Institute Members</h1>
+        <h1 className="text-xl font-bold text-[#0a0a14]">Institute Members</h1>
         <button
           onClick={() => setShowAddModal(true)}
-          className="bg-[#0B5B4D] text-white px-6 py-2 rounded-md"
+          className="bg-[#071526] text-white px-6 py-2 rounded-md"
         >
           Add Member
         </button>
@@ -100,7 +100,7 @@ export default function MembersPage() {
             />
             <button
               onClick={() => copyToClipboard(signupLink)}
-              className="py-2 px-3 h-fit rounded-md flex items-center gap-2 text-white bg-[#0B5B4D] hover:bg-[#094d41] text-sm font-medium"
+              className="py-2 px-3 h-fit rounded-md flex items-center gap-2 text-white bg-[#071526] hover:bg-[#094d41] text-sm font-medium"
             >
               <Copy size={16} />
               Copy
@@ -109,16 +109,16 @@ export default function MembersPage() {
       </div>
 
       {/* MEMBERS TABLE */}
-      <h2 className="text-lg font-bold text-[#1E1E1E] mb-4">All Members</h2>
+      <h2 className="text-lg font-bold text-[#0a0a14] mb-4">All Members</h2>
 
       {loading ? (
         <div className="flex-1 flex items-center justify-center">
-          <Loader2 className="animate-spin text-[#0B5B4D]" size={32} />
+          <Loader2 className="animate-spin text-[#071526]" size={32} />
         </div>
       ) : (
         <div className="flex-1">
-          <div className="border bg-[#EAF6EE] rounded-lg">
-            <div className="grid grid-cols-6 py-3 text-sm font-semibold text-[#1E1E1E]">
+          <div className="border bg-[#EEF1F8] rounded-lg">
+            <div className="grid grid-cols-6 py-3 text-sm font-semibold text-[#0a0a14]">
               <div className="pl-6 text-center">Sr.No</div>
               <div className="text-center col-span-1">Name</div>
               <div className="text-center">Email</div>

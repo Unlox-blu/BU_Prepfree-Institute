@@ -67,7 +67,7 @@ function getScoreBadge(score: number) {
 }
 
 const getColor = (value: number) => {
-  if (value >= 4) return "#007A55";
+  if (value >= 4) return "#314370";
   if (value >= 3) return "#FE9A00";
   return "#FD7678";
 };
@@ -245,7 +245,7 @@ const Page = () => {
           <button
             onClick={handleDownloadReport}
             disabled={downloading}
-            className="flex items-center justify-center gap-2 px-4 py-2 bg-[#0B5B4D] text-white rounded-md hover:bg-[#054238] transition-colors text-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed w-full sm:w-auto"
+            className="flex items-center justify-center gap-2 px-4 py-2 bg-[#071526] text-white rounded-md hover:bg-[#314370] transition-colors text-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed w-full sm:w-auto"
           >
             {downloading ? <Loader2 size={16} className="animate-spin" /> : <Download size={16} />}
             {downloading ? 'Generating...' : 'Download Report'}
@@ -266,7 +266,7 @@ const Page = () => {
         {/* Header Section */}
         <div className="w-full flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
           <div className="flex flex-col items-start">
-            <h1 className="text-[#00241E] text-xl font-medium">
+            <h1 className="text-[#071526] text-xl font-medium">
               Performance Breakdown
             </h1>
           </div>
@@ -275,7 +275,7 @@ const Page = () => {
         {/* Top Result Card Section */}
         <div className="flex flex-col lg:flex-row w-full gap-4 mt-2">
           {/* Score Badge Card */}
-          <div className="w-full lg:w-1/4 bg-gradient-to-b from-[#17C1A3] to-[#0B5B4D] px-6 py-10 sm:px-8 sm:py-14 flex flex-col items-center justify-center rounded-xl shadow-lg">
+          <div className="w-full lg:w-1/4 bg-gradient-to-b from-[#9FB3C8] to-[#071526] px-6 py-10 sm:px-8 sm:py-14 flex flex-col items-center justify-center rounded-xl shadow-lg">
             <Image
               src={img}
               alt="Result Badge"
@@ -296,25 +296,25 @@ const Page = () => {
               <h1 className="text-lg font-medium">Overview</h1>
               <div className="w-full rounded-xl p-4 sm:p-5 bg-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-sm">
                 <div className="flex items-center gap-3 w-full sm:w-auto">
-                  <div className="p-2 bg-[#ECFDF5] rounded-lg"><UserCog size={20} className="text-[#0B5B4D]" /></div>
+                  <div className="p-2 bg-[#EEF1F8] rounded-lg"><UserCog size={20} className="text-[#071526]" /></div>
                   <div className="flex flex-col">
-                    <span className="font-medium text-[#0B5B4D] text-sm">Behavioural Competency</span>
+                    <span className="font-medium text-[#071526] text-sm">Behavioural Competency</span>
                     <span className="font-bold text-black text-lg">{results?.scores?.behavioral_competency || "0/30"}</span>
                   </div>
                 </div>
                 <div className="hidden sm:block w-px h-10 bg-gray-200"></div>
                 <div className="flex items-center gap-3 w-full sm:w-auto">
-                  <div className="p-2 bg-[#ECFDF5] rounded-lg"><AudioWaveform size={20} className="text-[#0B5B4D]" /></div>
+                  <div className="p-2 bg-[#EEF1F8] rounded-lg"><AudioWaveform size={20} className="text-[#071526]" /></div>
                   <div className="flex flex-col">
-                    <span className="font-medium text-[#0B5B4D] text-sm">Speech quality</span>
+                    <span className="font-medium text-[#071526] text-sm">Speech quality</span>
                     <span className="font-bold text-black text-lg">{results?.scores?.speech_quality || "0/20"}</span>
                   </div>
                 </div>
                 <div className="hidden sm:block w-px h-10 bg-gray-200"></div>
                 <div className="flex items-center gap-3 w-full sm:w-auto">
-                  <div className="p-2 bg-[#ECFDF5] rounded-lg"><MessageSquareText size={20} className="text-[#0B5B4D]" /></div>
+                  <div className="p-2 bg-[#EEF1F8] rounded-lg"><MessageSquareText size={20} className="text-[#071526]" /></div>
                   <div className="flex flex-col">
-                    <span className="font-medium text-[#0B5B4D] text-sm">Response quality</span>
+                    <span className="font-medium text-[#071526] text-sm">Response quality</span>
                     <span className="font-bold text-black text-lg">{results?.scores?.response_quality || "0/50"}</span>
                   </div>
                 </div>
@@ -348,7 +348,7 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <h1 className="text-[#00241E] mt-8 text-xl font-medium mb-4">
+        <h1 className="text-[#071526] mt-8 text-xl font-medium mb-4">
           An in-depth look at your mock interview performance metrics:
         </h1>
         <div ref={chartsRef} className="w-full grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4">
@@ -387,10 +387,10 @@ const Page = () => {
         </div>
         <div className="w-full h-auto pb-10">
           <div className="flex flex-col items-start mt-4">
-            <h1 className="text-[#00241E] text-xl font-medium">
+            <h1 className="text-[#071526] text-xl font-medium">
               Question wise feedback
             </h1>
-            <p className="text-[#00241E] text-md">
+            <p className="text-[#071526] text-md">
               Detailed AI analysis of your responses with actionable insights for
               improvement
             </p>
@@ -423,7 +423,7 @@ const Page = () => {
                       className={`
                 h-8 px-3 flex items-center justify-center rounded-full text-sm font-medium cursor-pointer shrink-0 transition-all
                 ${activeIndex === index
-                          ? "bg-[#2E8D5D] text-white"
+                          ? "bg-[#314370] text-white"
                           : "bg-[#EDEDED] text-[#A5A5A5]"
                         }
                 ${isSpecial ? "w-auto px-4" : "w-8"}
@@ -439,14 +439,14 @@ const Page = () => {
                 {/* Question */}
                 <h1 className="text-xl font-semibold">{current.question}</h1>
 
-                <h1 className="text-[#00241E]/71 font-medium">Skill Assessed</h1>
+                <h1 className="text-[#071526]/71 font-medium">Skill Assessed</h1>
                 {/* Skill Tags */}
                 <div className="flex gap-2 flex-wrap">
                   {current.skills && current.skills.length > 0 ? (
                     current.skills.map((skill: string, i: number) => (
                       <span
                         key={i}
-                        className="px-3 py-1 text-sm rounded-full bg-[#ECFDF5] text-[#007A55]"
+                        className="px-3 py-1 text-sm rounded-full bg-[#EEF1F8] text-[#314370]"
                       >
                         {skill}
                       </span>
@@ -459,22 +459,22 @@ const Page = () => {
                 {/* Answers */}
                 <div className="flex flex-col gap-4">
                   <div className="flex flex-col gap-2">
-                    <h3 className="text-[#00241E]/71 font-medium">{current.phase === 'outro' ? 'Your Response' : 'Your Answer'}</h3>
-                    <p className="text-lg border text-[#00241E] bg-[#F9FAFB] rounded-lg p-4">
+                    <h3 className="text-[#071526]/71 font-medium">{current.phase === 'outro' ? 'Your Response' : 'Your Answer'}</h3>
+                    <p className="text-lg border text-[#071526] bg-[#F9FAFB] rounded-lg p-4">
                       {current.userAnswer}
                     </p>
                   </div>
 
                   <div className="flex flex-col gap-2">
-                    <h3 className="text-[#00241E]/71 font-medium">{current.phase === 'outro' ? 'AI Response' : 'Ideal Answer'}</h3>
-                    <div className="p-4 border rounded-lg bg-[#ECFDF5] flex flex-col gap-4">
+                    <h3 className="text-[#071526]/71 font-medium">{current.phase === 'outro' ? 'AI Response' : 'Ideal Answer'}</h3>
+                    <div className="p-4 border rounded-lg bg-[#EEF1F8] flex flex-col gap-4">
                       <p className="text-lg">{current.phase === 'outro' ? (current.feedback || current.idealAnswer) : current.idealAnswer}</p>
 
                       <div className="flex gap-2 flex-wrap pt-4 border-t">
                         {current.skills && current.skills.map((skill: string, i: number) => (
                           <span
                             key={i}
-                            className="flex gap-1 items-center px-3 py-1 text-sm rounded-full bg-[#D0FAE5] text-[#007A55]"
+                            className="flex gap-1 items-center px-3 py-1 text-sm rounded-full bg-[#EEF1F8] text-[#314370]"
                           >
                             <Check size={16} />
                             {skill}
@@ -486,7 +486,7 @@ const Page = () => {
                 </div>
 
                 {/* Fluency Metrics */}
-                <h1 className="text-[#00241E]/71 font-medium">Verbal Fluency</h1>
+                <h1 className="text-[#071526]/71 font-medium">Verbal Fluency</h1>
                 <div className="flex flex-wrap items-center justify-evenly gap-4">
                   {current.fluency && Object.entries(current.fluency).map(([key, value]) => (
                     <div
@@ -504,16 +504,16 @@ const Page = () => {
 
                 {/* Reasoning */}
                 <div className="flex flex-col gap-3">
-                  <h1 className="text-[#00241E]/71 font-medium">
+                  <h1 className="text-[#071526]/71 font-medium">
                     How can You Improve?
                   </h1>
                   {current.improvements && current.improvements.length > 0 ? (
                     current.improvements.map((imp: string, i: number) => (
                       <div key={i} className="flex gap-2 items-center text-sm">
-                        <div className="rounded-full border border-[#007A55] p-1 shrink-0">
-                          <Check size={12} color="#007A55" />
+                        <div className="rounded-full border border-[#314370] p-1 shrink-0">
+                          <Check size={12} color="#314370" />
                         </div>
-                        <p className="text-[#00241E]">{imp}</p>
+                        <p className="text-[#071526]">{imp}</p>
                       </div>
                     ))
                   ) : (
@@ -588,7 +588,7 @@ function ContentRelevanceScoreCard({ data }: { data: any }) {
             />
             <Bar
               dataKey="score"
-              fill="#0B5B4D"
+              fill="#071526"
               radius={5}
               barSize={6}
               className="bg-gray-100 w-full"
@@ -637,7 +637,7 @@ export function VerbalFluencyCard({ data }: { data: any }) {
               dataKey="score"
               fill="#C8E3EC"
               strokeWidth={2}
-              stroke="#0B5B4D"
+              stroke="#071526"
               fillOpacity={0.5}
               dot={{
                 fill: "#65ABFC",
@@ -699,7 +699,7 @@ export function ChartLineLinear({ data }: { data: any }) {
             <Line
               dataKey="time"
               type="linear"
-              stroke="#0B5B4D"
+              stroke="#071526"
               strokeWidth={2}
             />
           </LineChart>
@@ -741,7 +741,7 @@ export function ChartAreaDefault({ answering_time = [] }) {
           >
             <defs>
               <linearGradient id="gradient" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="30%" stopColor="#0B5B4D" />
+                <stop offset="30%" stopColor="#071526" />
                 <stop offset="100%" stopColor="#ffffff" />
               </linearGradient>
             </defs>
@@ -773,7 +773,7 @@ export function ChartAreaDefault({ answering_time = [] }) {
               type="natural"
               fill="url(#gradient)"
               fillOpacity={0.9}
-              stroke="#0B5B4D"
+              stroke="#071526"
               strokeWidth={2}
             />
           </AreaChart>
@@ -799,8 +799,8 @@ function SemicircularProgress({
   percentage,
   size = 350,
   strokeWidth = 8,
-  color = "#0B5B4D",
-  bgColor = "#E7F0ED",
+  color = "#071526",
+  bgColor = "#EEF1F8",
   showLabel = true,
   tooltipLabel = "Clarity",
 }: SemicircularProgressProps) {

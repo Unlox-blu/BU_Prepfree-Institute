@@ -98,7 +98,7 @@ const Page = () => {
             <button
               onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
               disabled={!paginationMeta.hasPrev}
-              className="border-2 border-[#0B5B4D] text-[#0B5B4D] px-6 py-1 rounded-md cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
+              className="border-2 border-[#071526] text-[#071526] px-6 py-1 rounded-md cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
             >
               Prev
             </button>
@@ -108,8 +108,8 @@ const Page = () => {
                 onClick={() => setCurrentPage(pageNo)}
                 className={`px-3 py-1 rounded-md border-2 cursor-pointer text-sm ${
                   currentPage === pageNo
-                    ? "bg-[#0B5B4D] border-[#0B5B4D] text-white font-semibold"
-                    : "border-[#0B5B4D] text-[#0B5B4D]"
+                    ? "bg-[#071526] border-[#071526] text-white font-semibold"
+                    : "border-[#071526] text-[#071526]"
                 }`}
               >
                 {pageNo}
@@ -120,7 +120,7 @@ const Page = () => {
                 setCurrentPage((p) => Math.min(paginationMeta.totalPages, p + 1))
               }
               disabled={!paginationMeta.hasNext}
-              className="bg-[#0B5B4D] border-2 border-[#0B5B4D] text-white px-6 py-1 rounded-md cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
+              className="bg-[#071526] border-2 border-[#071526] text-white px-6 py-1 rounded-md cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
             >
               Next
             </button>
@@ -164,7 +164,7 @@ export const columns: ColumnDef<Candidates>[] = [
     cell: ({ row }) => (
       <Link
         href={`/dashboard/mock-interview/${row.original.id}`}
-        className="text-[#005B4F] font-medium underline underline-offset-2"
+        className="text-[#314370] font-medium underline underline-offset-2"
       >
         View
       </Link>

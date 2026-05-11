@@ -96,7 +96,7 @@ export default function ProfilePage() {
   if (loading) {
     return (
       <div className="flex h-[80vh] items-center justify-center bg-[#F1F1F1]">
-        <Loader2 className="animate-spin text-[#0B5B4D]" size={32} />
+        <Loader2 className="animate-spin text-[#071526]" size={32} />
       </div>
     );
   }
@@ -117,8 +117,8 @@ export default function ProfilePage() {
         {/* Profile Summary Card */}
         <Card className="shadow-sm border-none">
           <CardContent className="pt-8 flex flex-col items-center">
-            <div className="w-24 h-24 rounded-full bg-[#EAF6EE] flex items-center justify-center mb-4">
-              <User size={40} className="text-[#0B5B4D]" />
+            <div className="w-24 h-24 rounded-full bg-[#EEF1F8] flex items-center justify-center mb-4">
+              <User size={40} className="text-[#071526]" />
             </div>
 
             <h2 className="text-lg font-bold text-gray-900">
@@ -135,7 +135,7 @@ export default function ProfilePage() {
                 </span>
                 <Badge
                   variant="outline"
-                  className="capitalize bg-white text-[#0B5B4D] border-[#0B5B4D]/20"
+                  className="capitalize bg-white text-[#071526] border-[#071526]/20"
                 >
                   {profile?.role || "Member"}
                 </Badge>
@@ -268,7 +268,7 @@ export default function ProfilePage() {
                 <Button
                   type="submit"
                   disabled={saving}
-                  className="bg-[#0B5B4D] hover:bg-[#084a3e] px-8 py-5 text-white flex items-center gap-2"
+                  className="bg-[#071526] hover:bg-[#084a3e] px-8 py-5 text-white flex items-center gap-2"
                 >
                   {saving ? (
                     <Loader2 className="animate-spin" size={18} />

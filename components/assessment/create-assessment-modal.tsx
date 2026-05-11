@@ -594,7 +594,7 @@ export default function CreateAssessmentModal({
                           ? categories.domain || categories.aptitude
                           : categories.soft
                       }
-                      className="accent-[#0B5B4D] w-4 h-4"
+                      className="accent-[#071526] w-4 h-4"
                     />
                     <span>
                       {cat === "soft" ? "Soft Skills" : `${cat} Based`}
@@ -636,7 +636,7 @@ export default function CreateAssessmentModal({
                           },
                         ]);
                       }}
-                      className="accent-[#0B5B4D]"
+                      className="accent-[#071526]"
                     />
                     <span>Use AI</span>
                   </label>
@@ -649,7 +649,7 @@ export default function CreateAssessmentModal({
                         setMethod("manual");
                         setRows([]);
                       }}
-                      className="accent-[#0B5B4D]"
+                      className="accent-[#071526]"
                     />
                     <span>Manually</span>
                   </label>
@@ -704,7 +704,7 @@ export default function CreateAssessmentModal({
                       {selectedSubDomains.map((tag) => (
                         <div
                           key={tag}
-                          className="flex items-center gap-2 px-3 py-1 rounded-full text-sm border border-[#0B5B4D] bg-green-50 text-[#0B5B4D]"
+                          className="flex items-center gap-2 px-3 py-1 rounded-full text-sm border border-[#071526] bg-green-50 text-[#071526]"
                         >
                           {tag}
                           <button
@@ -747,8 +747,8 @@ export default function CreateAssessmentModal({
                                 }
                                 className={`px-4 py-1.5 rounded-full text-sm border transition-all ${
                                   selected
-                                    ? "bg-[#0B5B4D] text-white border-[#0B5B4D]"
-                                    : "bg-white text-[#0B5B4D] border-[#9ed6c6] hover:bg-green-50"
+                                    ? "bg-[#071526] text-white border-[#071526]"
+                                    : "bg-white text-[#071526] border-[#9ed6c6] hover:bg-green-50"
                                 }`}
                               >
                                 {selected ? s : `+ ${s}`}
@@ -811,7 +811,7 @@ export default function CreateAssessmentModal({
                         type="radio"
                         checked={true}
                         readOnly
-                        className="peer h-4 w-4 accent-[#0B5B4D]"
+                        className="peer h-4 w-4 accent-[#071526]"
                       />
                       <span>MCQ Single Correct Answer</span>
                     </label>
@@ -847,7 +847,7 @@ export default function CreateAssessmentModal({
               <Button
                 onClick={handleSubmit}
                 disabled={isLoading}
-                className="px-6 py-2 bg-[#0B5B4D] text-white rounded-md text-sm font-medium hover:bg-[#094d41] transition-colors"
+                className="px-6 py-2 bg-[#071526] text-white rounded-md text-sm font-medium hover:bg-[#094d41] transition-colors"
               >
                 {isLoading && (
                   <Loader2 className="animate-spin mr-2" size={16} />

@@ -31,7 +31,7 @@ const ExperienceSection = ({
     <div className="w-full flex flex-col gap-2">
       {/* Header */}
       <div className="flex justify-between items-center">
-        <h1 className="text-[#1E1E1E] font-bold text-lg">Experience</h1>
+        <h1 className="text-[#0a0a14] font-bold text-lg">Experience</h1>
       </div>
 
       {/* Cards */}
@@ -51,10 +51,10 @@ const ExperienceSection = ({
                   )}
                 </div>
                 <div className="flex flex-col gap-1">
-                  <h2 className="text-md font-semibold text-[#1E1E1E]">
+                  <h2 className="text-md font-semibold text-[#0a0a14]">
                     {exp.title}
                   </h2>
-                  <p className="text-sm text-[#0B5B4D] font-semibold">
+                  <p className="text-sm text-[#071526] font-semibold">
                     {exp.name}
                     <span className="text-xs text-[#616161] ml-2">
                       {exp.type}

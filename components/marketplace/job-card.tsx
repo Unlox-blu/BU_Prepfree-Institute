@@ -50,7 +50,7 @@ export function JobCard({ job, onToggle }: JobCardProps) {
             <p className="text-gray-500 text-sm capitalize">{job.domain}</p>
           </div>
         </div>
-        <div className="w-fit px-2 py-1 flex items-center justify-center gap-1 bg-[#E7F6EA] text-[#0B5B4D] rounded-full font-medium">
+        <div className="w-fit px-2 py-1 flex items-center justify-center gap-1 bg-[#EEF1F8] text-[#071526] rounded-full font-medium">
           <Users size={12} />
           <h1 className="text-xs">{job.applicationCount} Applied</h1>
         </div>
@@ -68,7 +68,7 @@ export function JobCard({ job, onToggle }: JobCardProps) {
           <p className="text-sm truncate">{job.location}</p>
         </div>
         <div className="flex gap-1 justify-end">
-          <p className="text-sm font-semibold text-[#0B5B4D]">{job.salary}</p>
+          <p className="text-sm font-semibold text-[#071526]">{job.salary}</p>
         </div>
         <div className="flex gap-1 items-center">
           <User size={16} />
@@ -85,7 +85,7 @@ export function JobCard({ job, onToggle }: JobCardProps) {
           <Switch
             checked={!job.isHidden}
             onCheckedChange={() => onToggle(job.uuid, job.isHidden)}
-            className="data-[state=checked]:bg-[#0B5B4D]"
+            className="data-[state=checked]:bg-[#071526]"
           />
           <span className="text-xs text-gray-500 font-medium uppercase">
             {!job.isHidden ? "Live" : "Hidden"}
@@ -94,13 +94,13 @@ export function JobCard({ job, onToggle }: JobCardProps) {
         <div className="flex gap-2">
           <Link
             href={`/dashboard/marketplace-jobs/job-applicants-list?jobId=${job.uuid}`}
-            className="px-4 py-1.5 border-2 border-[#0B5B4D] cursor-pointer font-medium rounded-md text-[#0B5B4D] text-xs flex items-center hover:bg-[#0B5B4D]/10"
+            className="px-4 py-1.5 border-2 border-[#071526] cursor-pointer font-medium rounded-md text-[#071526] text-xs flex items-center hover:bg-[#071526]/10"
           >
             View List
           </Link>
           <Link
             href={job.href}
-            className="px-4 py-1.5 border-2 rounded-md cursor-pointer flex gap-2 font-medium items-center bg-[#0B5B4D] border-[#0B5B4D] text-white text-xs hover:bg-[#094d41]"
+            className="px-4 py-1.5 border-2 rounded-md cursor-pointer flex gap-2 font-medium items-center bg-[#071526] border-[#071526] text-white text-xs hover:bg-[#314370]"
           >
             Details
           </Link>

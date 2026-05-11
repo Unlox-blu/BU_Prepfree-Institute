@@ -73,7 +73,7 @@ export function NavMain({
 
   return (
     <SidebarGroup className={`gap-1 ${open ? "p-0 pr-2" : ""}`}>
-      <SidebarGroupLabel className="text-[#ABC8C8]">MAIN</SidebarGroupLabel>
+      <SidebarGroupLabel className="text-[#FFF4CB]/70">MAIN</SidebarGroupLabel>
       <SidebarMenu className="gap-3">
         {items.map((item) => {
           const hasSubItems =
@@ -109,7 +109,7 @@ export function NavMain({
                         >
                           <div
                             className={`w-full h-full relative ${
-                              isSelected ? "bg-[#00323C] rounded-[10px]" : ""
+                              isSelected ? "bg-[#9E2339] rounded-[10px]" : ""
                             }`}
                           >
                             <div
@@ -122,7 +122,7 @@ export function NavMain({
                             <div
                               className={`w-full h-full rounded-[10px] transition-transform ease-in-out duration-200 ${
                                 isSelected
-                                  ? "bg-[#00A3A3]/20 shadow-[inset_0px_0px_15px_4px_rgba(0,_0,_0,_0.2)]"
+                                  ? "bg-[#9E2339]/25 shadow-[inset_0px_0px_15px_4px_rgba(0,_0,_0,_0.2)]"
                                   : ""
                               }`}
                             ></div>
@@ -140,7 +140,7 @@ export function NavMain({
                     >
                       <div
                         className={`w-full relative ${
-                          isSelected ? "bg-[#00323C] rounded-[10px]" : ""
+                          isSelected ? "bg-[#9E2339] rounded-[10px]" : ""
                         }`}
                       >
                         <div
@@ -156,7 +156,7 @@ export function NavMain({
                           tooltip={item.title}
                           className={`w-full rounded-[10px] transition-transform ease-in-out duration-200 ${
                             isSelected
-                              ? "bg-[#00A3A3]/20 shadow-[inset_0px_0px_15px_4px_rgba(0,_0,_0,_0.2)] py-5 px-4"
+                              ? "bg-[#9E2339]/25 shadow-[inset_0px_0px_15px_4px_rgba(0,_0,_0,_0.2)] py-5 px-4"
                               : ""
                           }`}
                         >
@@ -186,7 +186,7 @@ export function NavMain({
                   {/* --- SUB ITEMS --- */}
                   {hasSubItems && clickedItem === item.title && (
                     // Added 'pr-2' here to prevent right side cutoff
-                    <SidebarMenuSub className="mt-0 p-0 pr-2 relative gap-2 border-l border-[#006666] pl-3 w-full">
+                    <SidebarMenuSub className="mt-0 p-0 pr-2 relative gap-2 border-l border-[#FFF4CB]/30 pl-3 w-full">
                       {item.items?.map((subItem) => {
                         const isSubSelected = normalize(subItem.url) === deepestMatch;
                         return (
@@ -200,7 +200,7 @@ export function NavMain({
                             >
                               <div
                                 className={`w-full relative rounded-[10px] ${
-                                  isSubSelected ? "bg-[#00323C]" : ""
+                                  isSubSelected ? "bg-[#9E2339]" : ""
                                 }`}
                               >
                                 {isSubSelected && (
@@ -211,8 +211,8 @@ export function NavMain({
                                     href={subItem.url}
                                     className={`w-full block py-2 px-3 rounded-[10px] transition-all ${
                                       isSubSelected
-                                        ? "bg-[#00A3A3]/20 shadow-[inset_0px_0px_15px_4px_rgba(0,_0,_0,_0.2)] text-[#00cccc] font-medium"
-                                        : "text-white hover:text-[#00cccc]"
+                                        ? "bg-[#9E2339]/25 shadow-[inset_0px_0px_15px_4px_rgba(0,_0,_0,_0.2)] text-[#FFF4CB] font-medium"
+                                        : "text-white hover:text-[#FFF4CB]/70"
                                     }`}
                                   >
                                     {subItem.title}
@@ -223,7 +223,7 @@ export function NavMain({
                           </SidebarMenuSubItem>
                         );
                       })}
-                      <div className="w-1 h-1 rounded-full bg-[#006666] absolute bottom-0 left-[-2px]" />
+                      <div className="w-1 h-1 rounded-full bg-[#9E2339] absolute bottom-0 left-[-2px]" />
                     </SidebarMenuSub>
                   )}
                 </div>

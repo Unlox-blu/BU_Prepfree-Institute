@@ -42,7 +42,7 @@ const JobsHoverTooltip = ({ active, payload }: any) => {
     <div className="bg-white border rounded-lg px-3 py-2 shadow-sm z-50">
       <p className="text-[11px] text-gray-500">{month}</p>
       <p className="text-[11px] text-gray-500">Total Jobs Posted</p>
-      <p className="text-lg font-semibold text-[#0B5B4D]">{desktop}</p>
+      <p className="text-lg font-semibold text-[#071526]">{desktop}</p>
     </div>
   );
 };
@@ -210,7 +210,7 @@ const InstituteDashboard = () => {
                     onClick={() => setPage(p)}
                     className={`w-8 h-8 flex items-center justify-center rounded-full text-xs font-medium transition-colors ${
                         current === p 
-                        ? "bg-[#0B5B4D] text-white" 
+                        ? "bg-[#071526] text-white" 
                         : "text-gray-600 hover:bg-gray-100"
                     }`}
                 >
@@ -285,7 +285,7 @@ const InstituteDashboard = () => {
                 data.jobs.slice(0, 3).map((job, idx) => (
                   <div key={`job-card-${job.id}-${idx}`} className="flex items-center justify-between w-full border-b border-gray-100 py-4 hover:bg-gray-50 transition-colors px-2 rounded-lg">
                     <div className="flex gap-3 items-center">
-                      <div className="w-10 h-10 rounded-full bg-[#EAF6EE] flex items-center justify-center overflow-hidden border border-gray-100 relative min-w-[40px]">
+                      <div className="w-10 h-10 rounded-full bg-[#EEF1F8] flex items-center justify-center overflow-hidden border border-gray-100 relative min-w-[40px]">
                           {job.logo ? (
                             <Image 
                               src={job.logo} 
@@ -295,7 +295,7 @@ const InstituteDashboard = () => {
                               className="object-cover w-full h-full"
                             />
                           ) : (
-                            <BriefcaseBusiness size={18} className="text-[#217A54]" />
+                            <BriefcaseBusiness size={18} className="text-[#314370]" />
                           )}
                       </div>
                       <div className="flex flex-col gap-0.5">
@@ -338,7 +338,7 @@ const InstituteDashboard = () => {
           </div>
 
           <div className="w-[60%]">
-            <div className="border bg-[#EAF6EE] rounded-lg">
+            <div className="border bg-[#EEF1F8] rounded-lg">
               <div className="grid grid-cols-4 py-3 text-xs font-semibold">
                 <div className="text-center">Company</div>
                 <div className="text-center">Role</div>
@@ -394,9 +394,9 @@ const InstituteDashboard = () => {
         <div className="w-full">
             <div className="flex justify-between items-center mb-4">
                 <h2 className="text-lg font-medium">Recent Job Postings</h2>
-                <Link href="/dashboard/marketplace-jobs" className="text-sm text-[#0B5B4D] hover:underline">View All</Link>
+                <Link href="/dashboard/marketplace-jobs" className="text-sm text-[#071526] hover:underline">View All</Link>
             </div>
-          <div className="border bg-[#EAF6EE] rounded-lg">
+          <div className="border bg-[#EEF1F8] rounded-lg">
             <div className="grid grid-cols-7 py-3 text-xs font-semibold">
               <div className="text-center">Company</div>
               <div className="text-center">Role</div>
@@ -424,7 +424,7 @@ const InstituteDashboard = () => {
                   </div>
                   <div className="text-center">{j.date}</div>
                   <div className="text-center">
-                    <Link href={`/dashboard/marketplace-jobs/${j.id}`} className="text-[#064F43] font-medium underline hover:text-[#04332c]">
+                    <Link href={`/dashboard/marketplace-jobs/${j.id}`} className="text-[#314370] font-medium underline hover:text-[#04332c]">
                       View More
                     </Link>
                   </div>
@@ -504,8 +504,8 @@ function DashboardCards({
               key={item.key}
               onClick={() => setActiveSection(isActive ? null : item.key)}
               className={`w-1/4 cursor-pointer transition-all duration-300 shadow-sm hover:shadow-md border-none group 
-                hover:bg-gradient-to-b from-[#054238] to-[#237E54]
-                ${isActive ? "bg-gradient-to-b from-[#054238] to-[#237E54] ring-2 ring-offset-2 ring-[#0B5B4D]" : "bg-white"}
+                hover:bg-gradient-to-b from-[#314370] to-[#071526]
+                ${isActive ? "bg-gradient-to-b from-[#314370] to-[#071526] ring-2 ring-offset-2 ring-[#071526]" : "bg-white"}
               `}
             >
               <CardHeader>
@@ -583,12 +583,12 @@ function StudentProfileCompletion({ data }: { data: any[] }) {
         {data && data.map((item, idx) => (
           <div key={idx} className="flex items-center justify-between gap-4 relative">
             <div
-              className="w-full h-4 bg-[#E8F1E8] rounded-full overflow-hidden cursor-pointer"
+              className="w-full h-4 bg-[#EEF1F8] rounded-full overflow-hidden cursor-pointer"
               onMouseEnter={() => setHoverIndex(idx)}
               onMouseLeave={() => setHoverIndex(null)}
             >
               <div
-                className={`h-full rounded-full transition-all duration-500 ease-out bg-[#69BE81] hover:bg-[#066841]`}
+                className={`h-full rounded-full transition-all duration-500 ease-out bg-[#9FB3C8] hover:bg-[#314370]`}
                 style={{ width: `${item.value}%` }}
               />
             </div>
@@ -596,7 +596,7 @@ function StudentProfileCompletion({ data }: { data: any[] }) {
             {hoverIndex === idx && (
               <div className="absolute bg-white shadow-xl p-3 rounded-xl border top-[-75px] left-[40%] z-50 animate-in fade-in zoom-in duration-200">
                 <p className="text-[11px] text-gray-500">Total Students</p>
-                <p className="text-xl font-semibold text-[#0B5B4D]">{item.value}</p>
+                <p className="text-xl font-semibold text-[#071526]">{item.value}</p>
                 <div className="w-3 h-3 rotate-45 bg-white border-l border-b absolute bottom-[-6px] left-[50%] -translate-x-1/2"></div>
               </div>
             )}
@@ -627,9 +627,12 @@ function DepartmentPlacementDonut({ data }: { data: any[] }) {
               cornerRadius={4} 
               paddingAngle={3}
             >
-              {chartData.map((entry, index) => (
-                <Cell key={`cell-${index}`} fill={entry.fill} />
-              ))}
+              {chartData.map((entry, index) => {
+                const bluePalette = ['#071526', '#314370', '#9FB3C8', '#5A73A2', '#829BC4'];
+                return (
+                  <Cell key={`cell-${index}`} fill={bluePalette[index % bluePalette.length]} />
+                );
+              })}
             </Pie>
           </PieChart>
         </ChartContainer>
@@ -648,7 +651,7 @@ function DepartmentPlacementDonut({ data }: { data: any[] }) {
   );
 }
 
-const chartConfig2 = { desktop: { label: "Total Jobs Posted ", color: "#17724E" } } satisfies ChartConfig;
+const chartConfig2 = { desktop: { label: "Total Jobs Posted ", color: "#314370" } } satisfies ChartConfig;
 export function ChartAreaDefault({ data }: { data: any[] }) {
   return (
     <Card>
@@ -661,7 +664,7 @@ export function ChartAreaDefault({ data }: { data: any[] }) {
           <AreaChart accessibilityLayer data={data} margin={{ left: 12, right: 12 }}>
             <defs>
               <linearGradient id="desktopGradient2" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#69BE81" stopOpacity={0.7} />
+                <stop offset="0%" stopColor="#9FB3C8" stopOpacity={0.7} />
                 <stop offset="100%" stopColor="var(--color-desktop)" stopOpacity={0} />
               </linearGradient>
             </defs>

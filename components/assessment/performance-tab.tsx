@@ -10,7 +10,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 
 const chartConfig = {
-  timeTaken: { label: "Time Taken (s)", color: "#0B5B4D" },
+  timeTaken: { label: "Time Taken (s)", color: "#071526" },
 };
 
 const CustomBar = (props: any) => {
@@ -19,7 +19,7 @@ const CustomBar = (props: any) => {
       <g>
         <defs>
           <linearGradient id="greenGradient" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#066841" stopOpacity={1} />
+            <stop offset="0%" stopColor="#314370" stopOpacity={1} />
             <stop offset="95%" stopColor="#FFFFFF" stopOpacity={1} />
           </linearGradient>
           <linearGradient id="orangeGradient" x1="0" y1="0" x2="0" y2="1">
@@ -107,7 +107,7 @@ export default function PerformanceTab({
                 onChange={(e) => filters?.onAttemptsChange(e.target.value)}
              />
 
-             <button className="px-3 py-2 flex items-center gap-2 text-white bg-[#0B5B4D] hover:bg-[#094d41] rounded-lg text-sm font-medium transition-all shadow-sm">
+             <button className="px-3 py-2 flex items-center gap-2 text-white bg-[#071526] hover:bg-[#094d41] rounded-lg text-sm font-medium transition-all shadow-sm">
                 <Download size={16}/> Export
              </button>
           </div>
@@ -158,7 +158,7 @@ export default function PerformanceTab({
                         <div className="text-right">
                             <button 
                                 onClick={() => onReportView(candidate)}
-                                className="text-[#0B5B4D] hover:text-[#094d41] text-sm font-medium underline"
+                                className="text-[#071526] hover:text-[#094d41] text-sm font-medium underline"
                             >
                                 View Report
                             </button>
