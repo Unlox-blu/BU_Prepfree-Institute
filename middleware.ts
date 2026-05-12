@@ -36,7 +36,7 @@ if (rootDomainRaw.startsWith("http://") || rootDomainRaw.startsWith("https://"))
 
   // 5. Strict Institute Check — accept all valid white-label institute subdomains
   const VALID_INSTITUTE_SUBDOMAINS = ['institute', 'buinstitute'];
-  if (currentSubdomain && VALID_INSTITUTE_SUBDOMAINS.includes(currentSubdomain)) {
+  if (currentSubdomain && currentSubdomain === 'buinstitute') {
       const requestHeaders = new Headers(req.headers);
       requestHeaders.set('x-subdomain', 'buinstitute');
 
