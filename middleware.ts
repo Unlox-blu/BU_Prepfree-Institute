@@ -38,11 +38,11 @@ if (rootDomainRaw.startsWith("http://") || rootDomainRaw.startsWith("https://"))
   const VALID_INSTITUTE_SUBDOMAINS = ['institute', 'buinstitute'];
   if (currentSubdomain && VALID_INSTITUTE_SUBDOMAINS.includes(currentSubdomain)) {
       const requestHeaders = new Headers(req.headers);
-      requestHeaders.set('x-subdomain', 'institute');
+      requestHeaders.set('x-subdomain', 'buinstitute');
 
       if (url.pathname === '/login' || url.pathname === '/') {
           url.pathname = '/login';
-          url.searchParams.set('subdomain', 'institute');
+          url.searchParams.set('subdomain', 'buinstitute');
           return NextResponse.rewrite(url, { headers: requestHeaders });
       }
       
