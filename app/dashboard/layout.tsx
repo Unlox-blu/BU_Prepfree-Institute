@@ -23,6 +23,8 @@ import React, { useState, useEffect } from "react";
 import { Bell, Search, Settings } from "lucide-react";
 import { toast } from "sonner";
 import { API_BASE_URL } from "@/lib/config";
+import Image from "next/image";
+import logo from "@/public/images/BU_Prepfree_logo.svg";
 
 export default function RootLayout({
   children,
@@ -118,10 +120,15 @@ export default function RootLayout({
           {/* Fixed Header */}
           <header className="w-full h-auto flex flex-col items-start gap-2 px-4 py-2 bg-[#F1F1F1] rounded-tl-[15px] z-10">
             <div className="w-full flex items-center justify-between">
-              <div className="flex gap-2 w-1/2">
+              <div className="flex gap-2 flex-1">
                 <SidebarTrigger className="-ml-1 bg-[#314370] text-[#f2f2f2] py-5 px-6 hover:bg-[#071526] hover:text-[#f2f2f2] hover:opacity-100 hover:shadow-none cursor-pointer" />
               </div>
-              <div className="flex gap-2">
+
+              <div className="flex-1 flex justify-center">
+                <Image src={logo} alt="BU Prepfree" height={32} className="h-10 w-auto" priority />
+              </div>
+
+              <div className="flex items-center gap-3 flex-1 justify-end">
                 <div className="bg-[#314370] text-[#f2f2f2] px-4 py-3 cursor-pointer rounded-md">
                   <Bell size={18} />
                 </div>
