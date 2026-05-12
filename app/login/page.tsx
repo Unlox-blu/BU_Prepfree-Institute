@@ -30,7 +30,7 @@ const LoginPage = () => {
     root = root.split(':')[0];
 
     // 3. Construct Expected Domain
-    const expectedDomain = `institute.${root}`;
+    const expectedDomain = `buinstitute.${root}`;
 
     // Debugging logs
     console.log("Login Page Debug:", {
