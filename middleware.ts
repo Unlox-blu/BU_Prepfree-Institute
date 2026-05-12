@@ -3,6 +3,8 @@ import type { NextRequest } from 'next/server';
 
 export async function middleware(req: NextRequest) {
   const url = req.nextUrl.clone();
+
+  // deployment comments:
   
   // 1. Get raw host (e.g. institute.localhost:3000)
   const hostWithPort = req.headers.get("host") || "";
